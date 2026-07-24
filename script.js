@@ -7,3 +7,18 @@ document.getElementById("answer").innerHTML=
 "<br><br>अभी AI नहीं जोड़ा गया है।";
 
 }
+function startListening(){
+
+const recognition = new(window.SpeechRecognition || window.webkitSpeechRecognition)();
+
+recognition.lang="hi-IN";
+
+recognition.start();
+
+recognition.onresult=function(event){
+
+document.getElementById("question").value=event.results[0][0].transcript;
+
+};
+
+}
