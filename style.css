@@ -36,3 +36,14 @@ button{
     padding:20px;
     border-radius:10px;
 }
+#chatBox{
+width:90%;
+height:350px;
+margin:auto;
+margin-top:20px;
+background:white;
+overflow-y:auto;
+border-radius:12px;
+padding:10px;
+border:1px solid #ddd;
+}
