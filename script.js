@@ -1,24 +1,26 @@
-function askAI(){
+function askAI() {
 
-let question=document.getElementById("question").value;
+let question = document.getElementById("question").value;
 
-document.getElementById("answer").innerHTML=
-"<b>आपने पूछा:</b><br>"+question+
-"<br><br>अभी AI नहीं जोड़ा गया है।";
+if(question.trim()=="") return;
 
-}
-function startListening(){
+let chatBox = document.getElementById("chatBox");
 
-const recognition = new(window.SpeechRecognition || window.webkitSpeechRecognition)();
+chatBox.innerHTML += `
+<div style="background:#dbeafe;padding:12px;margin:10px;border-radius:10px;text-align:right;">
+<b>👤 आप:</b><br>${question}
+</div>
+`;
 
-recognition.lang="hi-IN";
+chatBox.innerHTML += `
+<div style="background:#f3f4f6;padding:12px;margin:10px;border-radius:10px;text-align:left;">
+<b>🤖 AI:</b><br>
+मैं अभी डेमो मोड में हूँ।
+</div>
+`;
 
-recognition.start();
+document.getElementById("question").value="";
 
-recognition.onresult=function(event){
-
-document.getElementById("question").value=event.results[0][0].transcript;
-
-};
+chatBox.scrollTop=chatBox.scrollHeight;
 
 }
