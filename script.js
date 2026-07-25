@@ -25,3 +25,14 @@ chatBox.scrollTop=chatBox.scrollHeight;
 
 }
 localStorage.setItem("chatHistory", chatBox.innerHTML);
+window.onload = function(){
+
+let savedChat = localStorage.getItem("chatHistory");
+
+if(savedChat){
+
+document.getElementById("chatBox").innerHTML = savedChat;
+
+}
+
+}
