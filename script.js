@@ -22,5 +22,5 @@ chatBox.innerHTML += `
 document.getElementById("question").value="";
 
 chatBox.scrollTop=chatBox.scrollHeight;
-
+localStorage.setItem("chatHistory", chatBox.innerHTML);
 }
