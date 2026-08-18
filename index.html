@@ -1,3 +1,111 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Gayatri Studio | Photography & Photo Restoration</title>
+
+<style>
+
+*{
+box-sizing:border-box;
+margin:0;
+padding:0
+}
+
+body{
+font-family:Arial,sans-serif;
+background:#f5f7fb;
+color:#18202a;
+line-height:1.6
+}
+
+header{
+background:linear-gradient(135deg,#14253b,#263f5d);
+color:white;
+text-align:center;
+padding:35px 18px
+}
+
+.logo{
+font-size:32px;
+font-weight:800;
+letter-spacing:1px
+}
+
+.tagline{
+font-size:18px;
+margin-top:8px;
+color:#dbe7f5
+}
+
+nav{
+background:white;
+padding:15px;
+text-align:center;
+box-shadow:0 2px 10px #0001;
+position:sticky;
+top:0;
+z-index:10
+}
+
+nav a{
+text-decoration:none;
+color:#18202a;
+font-weight:bold;
+margin:0 12px
+}
+
+.hero{
+text-align:center;
+padding:65px 20px;
+background:linear-gradient(#eef5ff,#fff)
+}
+
+.hero h1{
+font-size:38px;
+margin-bottom:20px
+}
+
+.hero p{
+font-size:18px;
+color:#5d6673;
+max-width:700px;
+margin:auto
+}
+
+.btn{
+display:inline-block;
+margin-top:28px;
+padding:15px 28px;
+border-radius:35px;
+background:#119b8b;
+color:white;
+text-decoration:none;
+font-size:18px;
+font-weight:bold
+}
+
+section{
+padding:55px 20px;
+max-width:1100px;
+margin:auto
+}
+
+.section-title{
+text-align:center;
+font-size:32px;
+margin-bottom:35px
+}
+
+.services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px
+}
+
+.card{
 background:white;
 padding:28px 20px;
 border-radius:18px;
@@ -18,8 +126,9 @@ margin-bottom:8px
 color:#68717d
 }
 
+
 /* =========================
-   AUTOMATIC GITHUB GALLERY
+   AUTOMATIC GALLERY
    ========================= */
 
 .gallery{
@@ -33,6 +142,7 @@ background:white;
 border-radius:16px;
 overflow:hidden;
 box-shadow:0 5px 20px #0002;
+cursor:pointer;
 transition:transform .2s,box-shadow .2s
 }
 
@@ -75,6 +185,84 @@ background:white;
 border-radius:16px
 }
 
+
+/* =========================
+   LARGE PHOTO PREVIEW
+   ========================= */
+
+.photo-modal{
+display:none;
+position:fixed;
+z-index:9999;
+left:0;
+top:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.92);
+align-items:center;
+justify-content:center;
+padding:55px 20px 25px;
+}
+
+.photo-modal.show{
+display:flex;
+}
+
+.photo-modal img{
+max-width:95%;
+max-height:82vh;
+width:auto;
+height:auto;
+object-fit:contain;
+border-radius:8px;
+box-shadow:0 5px 40px #000;
+}
+
+.close-modal{
+position:absolute;
+top:12px;
+right:18px;
+width:45px;
+height:45px;
+border:0;
+border-radius:50%;
+background:white;
+color:#18202a;
+font-size:30px;
+line-height:40px;
+cursor:pointer;
+font-weight:bold;
+z-index:10001;
+}
+
+.modal-caption{
+position:absolute;
+bottom:12px;
+left:20px;
+right:20px;
+text-align:center;
+color:white;
+font-size:15px;
+font-weight:bold;
+word-break:break-word;
+}
+
+.photo-modal img{
+animation:zoomIn .2s ease;
+}
+
+@keyframes zoomIn{
+from{
+transform:scale(.85);
+opacity:.5
+}
+to{
+transform:scale(1);
+opacity:1
+}
+}
+
+
 /* ========================= */
 
 .order{
@@ -108,6 +296,11 @@ text-align:center;
 padding:20px
 }
 
+
+/* =========================
+   MOBILE
+   ========================= */
+
 @media(max-width:600px){
 
 .logo{
@@ -140,15 +333,48 @@ font-size:12px;
 padding:8px
 }
 
+.photo-modal{
+padding:55px 8px 35px
 }
+
+.photo-modal img{
+max-width:98%;
+max-height:78vh;
+border-radius:5px
+}
+
+.close-modal{
+top:8px;
+right:10px;
+width:42px;
+height:42px;
+font-size:28px
+}
+
+.modal-caption{
+font-size:13px;
+bottom:8px
+}
+
+}
+
 </style>
+
 </head>
+
 
 <body>
 
+
+<!-- =========================
+     HEADER
+     ========================= -->
+
 <header>
 
-<div class="logo">📸 GAYATRI STUDIO</div>
+<div class="logo">
+📸 GAYATRI STUDIO
+</div>
 
 <div class="tagline">
 Photography • Photo Restoration • Document Services
@@ -157,19 +383,32 @@ Photography • Photo Restoration • Document Services
 </header>
 
 
+<!-- =========================
+     NAVIGATION
+     ========================= -->
+
 <nav>
 
 <a href="#services">Services</a>
+
 <a href="#gallery">Gallery</a>
+
 <a href="#order">Order</a>
+
 <a href="#contact">Contact</a>
 
 </nav>
 
 
+<!-- =========================
+     HERO
+     ========================= -->
+
 <section class="hero">
 
-<h1>आपकी फोटो, हमारा प्रोफेशनल काम</h1>
+<h1>
+आपकी फोटो, हमारा प्रोफेशनल काम
+</h1>
 
 <p>
 Passport Photo, Photo Restoration, Document Restoration,
@@ -186,9 +425,15 @@ href="https://wa.me/919451118011?text=नमस्ते%20Gayatri%20Studio,%20�
 </section>
 
 
+<!-- =========================
+     SERVICES
+     ========================= -->
+
 <section id="services">
 
-<h2 class="section-title">हमारी Services</h2>
+<h2 class="section-title">
+हमारी Services
+</h2>
 
 <div class="services">
 
@@ -197,7 +442,9 @@ href="https://wa.me/919451118011?text=नमस्ते%20Gayatri%20Studio,%20�
 
 <div class="icon">📸</div>
 
-<h3>Passport Photo</h3>
+<h3>
+Passport Photo
+</h3>
 
 <p>
 Professional passport और ID photos.
@@ -210,7 +457,9 @@ Professional passport और ID photos.
 
 <div class="icon">🧓</div>
 
-<h3>Photo Restoration</h3>
+<h3>
+Photo Restoration
+</h3>
 
 <p>
 पुरानी और खराब फोटो को साफ एवं बेहतर बनाना.
@@ -223,7 +472,9 @@ Professional passport और ID photos.
 
 <div class="icon">📄</div>
 
-<h3>Document Restoration</h3>
+<h3>
+Document Restoration
+</h3>
 
 <p>
 पुराने और खराब documents की digital cleaning.
@@ -236,7 +487,9 @@ Professional passport और ID photos.
 
 <div class="icon">✨</div>
 
-<h3>Photo Enhancement</h3>
+<h3>
+Photo Enhancement
+</h3>
 
 <p>
 Photo की light, clarity और overall quality सुधारना.
@@ -249,7 +502,9 @@ Photo की light, clarity और overall quality सुधारना.
 
 <div class="icon">🎨</div>
 
-<h3>Graphic Designing</h3>
+<h3>
+Graphic Designing
+</h3>
 
 <p>
 Poster, card, resume और अन्य designing services.
@@ -262,7 +517,9 @@ Poster, card, resume और अन्य designing services.
 
 <div class="icon">🖨️</div>
 
-<h3>Photo Printing</h3>
+<h3>
+Photo Printing
+</h3>
 
 <p>
 Photo printing और professional print services.
@@ -282,7 +539,9 @@ Photo printing और professional print services.
 
 <section id="gallery">
 
-<h2 class="section-title">हमारा काम</h2>
+<h2 class="section-title">
+हमारा काम
+</h2>
 
 <div class="gallery" id="githubGallery">
 
@@ -294,16 +553,40 @@ Photo printing और professional print services.
 
 <p style="text-align:center;margin-top:20px;color:#68717d">
 
-नई फोटो GitHub में upload करने पर वह यहाँ अपने-आप दिखाई देगी।
+फोटो को बड़ा देखने के लिए किसी भी फोटो पर क्लिक करें।
 
 </p>
 
 </section>
 
 
+<!-- =========================
+     LARGE PHOTO MODAL
+     ========================= -->
+
+<div class="photo-modal" id="photoModal">
+
+<button class="close-modal" id="closeModal">
+×
+</button>
+
+<img id="modalImage" src="" alt="Gayatri Studio">
+
+<div class="modal-caption" id="modalCaption">
+</div>
+
+</div>
+
+
+<!-- =========================
+     ORDER
+     ========================= -->
+
 <section id="order">
 
-<h2 class="section-title">फोटो का काम भेजें</h2>
+<h2 class="section-title">
+फोटो का काम भेजें
+</h2>
 
 <div class="order">
 
@@ -324,17 +607,31 @@ href="https://wa.me/919451118011?text=नमस्ते%20Gayatri%20Studio,%20�
 </section>
 
 
+<!-- =========================
+     CONTACT
+     ========================= -->
+
 <section id="contact" class="contact">
 
-<h2>GAYATRI STUDIO</h2>
+<h2>
+GAYATRI STUDIO
+</h2>
 
-<p>📸 Photography & Photo Editing</p>
+<p>
+📸 Photography & Photo Editing
+</p>
 
-<p>🧓 Photo Restoration</p>
+<p>
+🧓 Photo Restoration
+</p>
 
-<p>📄 Document Services</p>
+<p>
+📄 Document Services
+</p>
 
-<p>📱 WhatsApp: 9451118011</p>
+<p>
+📱 WhatsApp: 9451118011
+</p>
 
 <a class="btn"
 href="https://wa.me/919451118011?text=नमस्ते%20Gayatri%20Studio">
@@ -346,6 +643,10 @@ WhatsApp करें
 </section>
 
 
+<!-- =========================
+     FOOTER
+     ========================= -->
+
 <footer>
 
 © 2026 GAYATRI STUDIO • All Rights Reserved
@@ -354,26 +655,47 @@ WhatsApp करें
 
 
 <!-- =========================
-     GITHUB AUTOMATIC GALLERY SCRIPT
+     GITHUB AUTOMATIC GALLERY
      ========================= -->
 
 <script>
 
 const GITHUB_USERNAME = "awadheshbabita";
+
 const GITHUB_REPOSITORY = "gayatristudio";
 
-const gallery = document.getElementById("githubGallery");
+const gallery =
+document.getElementById("githubGallery");
+
+const photoModal =
+document.getElementById("photoModal");
+
+const modalImage =
+document.getElementById("modalImage");
+
+const modalCaption =
+document.getElementById("modalCaption");
+
+const closeModal =
+document.getElementById("closeModal");
+
 
 const apiURL =
 `https://api.github.com/repos/${GITHUB_USERNAME}/${GITHUB_REPOSITORY}/contents/`;
 
+
+/* =========================
+   LOAD GITHUB PHOTOS
+   ========================= */
 
 fetch(apiURL)
 
 .then(response => {
 
 if(!response.ok){
+
 throw new Error("GitHub API Error");
+
 }
 
 return response.json();
@@ -382,6 +704,7 @@ return response.json();
 
 
 .then(files => {
+
 
 const imageFiles = files.filter(file => {
 
@@ -397,9 +720,13 @@ gallery.innerHTML = "";
 if(imageFiles.length === 0){
 
 gallery.innerHTML = `
+
 <div class="gallery-loading">
+
 📷 अभी कोई photo उपलब्ध नहीं है।
+
 </div>
+
 `;
 
 return;
@@ -407,27 +734,64 @@ return;
 }
 
 
+/* =========================
+   CREATE PHOTO CARDS
+   ========================= */
+
 imageFiles.forEach(file => {
 
-const card = document.createElement("div");
 
-card.className = "gallery-card";
+const card =
+document.createElement("div");
 
-
-const image = document.createElement("img");
-
-image.src = file.download_url;
-
-image.alt = "Gayatri Studio Photo";
-
-image.loading = "lazy";
+card.className =
+"gallery-card";
 
 
-const caption = document.createElement("div");
+const image =
+document.createElement("img");
 
-caption.className = "gallery-caption";
+image.src =
+file.download_url;
 
-caption.textContent = file.name;
+image.alt =
+"Gayatri Studio Photo";
+
+image.loading =
+"lazy";
+
+
+const caption =
+document.createElement("div");
+
+caption.className =
+"gallery-caption";
+
+caption.textContent =
+file.name;
+
+
+/* =========================
+   CLICK PHOTO
+   ========================= */
+
+card.addEventListener("click",function(){
+
+modalImage.src =
+file.download_url;
+
+modalImage.alt =
+file.name;
+
+modalCaption.textContent =
+file.name;
+
+photoModal.classList.add("show");
+
+document.body.style.overflow =
+"hidden";
+
+});
 
 
 card.appendChild(image);
@@ -435,6 +799,7 @@ card.appendChild(image);
 card.appendChild(caption);
 
 gallery.appendChild(card);
+
 
 });
 
@@ -456,6 +821,59 @@ gallery.innerHTML = `
 </div>
 
 `;
+
+});
+
+
+/* =========================
+   CLOSE MODAL
+   ========================= */
+
+function closePhotoModal(){
+
+photoModal.classList.remove("show");
+
+modalImage.src = "";
+
+document.body.style.overflow = "";
+
+}
+
+
+/* Close button */
+
+closeModal.addEventListener(
+"click",
+closePhotoModal
+);
+
+
+/* Click outside image */
+
+photoModal.addEventListener(
+"click",
+function(event){
+
+if(event.target === photoModal){
+
+closePhotoModal();
+
+}
+
+});
+
+
+/* ESC key */
+
+document.addEventListener(
+"keydown",
+function(event){
+
+if(event.key === "Escape"){
+
+closePhotoModal();
+
+}
 
 });
 
