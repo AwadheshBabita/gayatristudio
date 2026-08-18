@@ -1,2 +1,3 @@
-# AI-STUDIOHUB
-My Personal AI hub
+# GAYATRI STUDIO
+
+Professional Photography • Photo Restoration • Document Services
