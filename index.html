@@ -4,15 +4,14 @@
 
 <meta charset="UTF-8">
 
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Gayatri Studio | Photography & Photo Restoration</title>
 
 <style>
 
 /* =========================
-   BASIC RESET
+   BASIC
 ========================= */
 
 *{
@@ -104,20 +103,20 @@ nav a{
 
 .btn{
     display:inline-block;
-    margin-top:28px;
-    padding:15px 28px;
+    margin-top:25px;
+    padding:14px 25px;
     border-radius:35px;
     background:#119b8b;
     color:white;
     text-decoration:none;
-    font-size:18px;
+    font-size:17px;
     font-weight:bold;
-    transition:0.3s;
+    transition:.3s;
 }
 
 .btn:hover{
-    background:#087d70;
     transform:translateY(-2px);
+    opacity:.9;
 }
 
 /* =========================
@@ -152,12 +151,11 @@ section{
     border-radius:18px;
     box-shadow:0 5px 20px #00000012;
     text-align:center;
-    transition:0.3s;
+    transition:.3s;
 }
 
 .card:hover{
     transform:translateY(-5px);
-    box-shadow:0 10px 25px #00000018;
 }
 
 .icon{
@@ -183,23 +181,18 @@ section{
     gap:20px;
 }
 
-/* Gallery Card */
-
 .gallery-card{
     background:white;
     border-radius:18px;
     overflow:hidden;
     box-shadow:0 5px 20px #00000015;
     cursor:pointer;
-    transition:0.3s;
+    transition:.3s;
 }
 
 .gallery-card:hover{
     transform:translateY(-5px);
-    box-shadow:0 12px 30px #00000025;
 }
-
-/* Gallery Image */
 
 .gallery-card img{
     width:100%;
@@ -209,16 +202,14 @@ section{
     background:#e9eef5;
 }
 
-/* Gallery Caption */
-
 .gallery-caption{
-    padding:14px 12px;
+    padding:13px 10px;
     text-align:center;
     font-weight:bold;
     color:#354052;
+    font-size:14px;
+    word-break:break-word;
 }
-
-/* Loading */
 
 .gallery-loading{
     grid-column:1/-1;
@@ -228,8 +219,6 @@ section{
     font-size:18px;
 }
 
-/* Error */
-
 .gallery-error{
     grid-column:1/-1;
     text-align:center;
@@ -237,6 +226,88 @@ section{
     background:white;
     border-radius:16px;
     color:#b42318;
+}
+
+/* =========================
+   PHOTO MODAL
+========================= */
+
+.photo-modal{
+    display:none;
+    position:fixed;
+    z-index:9999;
+    inset:0;
+    background:rgba(0,0,0,.93);
+    align-items:center;
+    justify-content:center;
+    padding:20px;
+}
+
+.photo-modal.show{
+    display:flex;
+}
+
+.modal-content{
+    max-width:95vw;
+    max-height:90vh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+}
+
+.modal-content img{
+    max-width:95vw;
+    max-height:80vh;
+    width:auto;
+    height:auto;
+    object-fit:contain;
+    border-radius:8px;
+    box-shadow:0 10px 40px #000;
+}
+
+.modal-caption{
+    color:white;
+    font-size:16px;
+    font-weight:bold;
+    margin-top:12px;
+    text-align:center;
+}
+
+.close-modal{
+    position:absolute;
+    top:12px;
+    right:15px;
+    width:48px;
+    height:48px;
+    border:0;
+    border-radius:50%;
+    background:white;
+    color:#111;
+    font-size:30px;
+    cursor:pointer;
+}
+
+.modal-nav{
+    position:absolute;
+    left:0;
+    right:0;
+    top:50%;
+    display:flex;
+    justify-content:space-between;
+    padding:0 15px;
+    transform:translateY(-50%);
+}
+
+.modal-nav button{
+    width:48px;
+    height:48px;
+    border:0;
+    border-radius:50%;
+    background:#ffffffdd;
+    color:#111;
+    font-size:30px;
+    cursor:pointer;
 }
 
 /* =========================
@@ -261,14 +332,56 @@ section{
 ========================= */
 
 .contact{
-    text-align:center;
+    max-width:none;
     background:#14253b;
     color:white;
-    max-width:none;
+    text-align:center;
+    padding:60px 20px;
 }
 
-.contact p{
-    margin:8px;
+.contact h2{
+    font-size:32px;
+    margin-bottom:20px;
+}
+
+.contact-info{
+    max-width:700px;
+    margin:auto;
+}
+
+.contact-item{
+    background:#ffffff12;
+    border:1px solid #ffffff18;
+    border-radius:14px;
+    padding:14px;
+    margin:10px auto;
+    font-size:16px;
+}
+
+.contact-item a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.contact-buttons{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-top:20px;
+}
+
+.contact-buttons .btn{
+    margin-top:0;
+}
+
+.call-btn{
+    background:#2563eb;
+}
+
+.email-btn{
+    background:#7c3aed;
 }
 
 /* =========================
@@ -279,98 +392,7 @@ footer{
     background:#0d1928;
     color:#ccd6e0;
     text-align:center;
-    padding:20px;
-}
-
-/* =========================
-   LARGE PHOTO MODAL
-========================= */
-
-.photo-modal{
-    display:none;
-    position:fixed;
-    z-index:1000;
-    inset:0;
-    background:rgba(0,0,0,0.92);
-    align-items:center;
-    justify-content:center;
-    padding:20px;
-}
-
-.photo-modal.show{
-    display:flex;
-}
-
-.modal-content{
-    max-width:95vw;
-    max-height:90vh;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:center;
-}
-
-.modal-content img{
-    max-width:95vw;
-    max-height:82vh;
-    width:auto;
-    height:auto;
-    object-fit:contain;
-    border-radius:10px;
-    box-shadow:0 10px 40px #000;
-}
-
-.modal-caption{
-    color:white;
-    font-size:18px;
-    font-weight:bold;
-    margin-top:12px;
-    text-align:center;
-}
-
-/* Close */
-
-.close-modal{
-    position:absolute;
-    top:15px;
-    right:20px;
-    width:48px;
-    height:48px;
-    border:none;
-    border-radius:50%;
-    background:white;
-    color:#111;
-    font-size:30px;
-    line-height:48px;
-    text-align:center;
-    cursor:pointer;
-    z-index:1002;
-}
-
-/* Previous / Next */
-
-.modal-nav{
-    position:absolute;
-    left:0;
-    right:0;
-    top:50%;
-    display:flex;
-    justify-content:space-between;
-    padding:0 15px;
-    transform:translateY(-50%);
-    pointer-events:none;
-}
-
-.modal-nav button{
-    pointer-events:auto;
-    width:48px;
-    height:48px;
-    border:none;
-    border-radius:50%;
-    background:#ffffffdd;
-    color:#111;
-    font-size:28px;
-    cursor:pointer;
+    padding:22px 15px;
 }
 
 /* =========================
@@ -400,12 +422,12 @@ footer{
     }
 
     nav{
-        padding:12px 5px;
+        padding:12px 4px;
     }
 
     nav a{
-        margin:0 6px;
-        font-size:14px;
+        margin:0 5px;
+        font-size:13px;
     }
 
     section{
@@ -426,20 +448,38 @@ footer{
     }
 
     .gallery-caption{
-        font-size:14px;
-        padding:10px 5px;
+        font-size:12px;
+        padding:9px 4px;
     }
 
     .modal-content img{
         max-width:94vw;
-        max-height:78vh;
+        max-height:76vh;
     }
 
     .modal-nav{
-        padding:0 8px;
+        padding:0 5px;
+    }
+
+    .modal-nav button{
+        width:42px;
+        height:42px;
+        font-size:26px;
+    }
+
+    .close-modal{
+        width:42px;
+        height:42px;
+        font-size:27px;
+    }
+
+    .contact h2{
+        font-size:28px;
     }
 
 }
+
+/* ========================= */
 
 </style>
 
@@ -522,92 +562,44 @@ href="https://wa.me/919451118011?text=नमस्ते%20Gayatri%20Studio,%20�
 
 
 <div class="card">
-
 <div class="icon">📸</div>
-
-<h3>
-Passport Photo
-</h3>
-
-<p>
-Professional passport और ID photos.
-</p>
-
+<h3>Passport Photo</h3>
+<p>Professional passport और ID photos.</p>
 </div>
 
 
 <div class="card">
-
 <div class="icon">🧓</div>
-
-<h3>
-Photo Restoration
-</h3>
-
-<p>
-पुरानी और खराब फोटो को साफ एवं बेहतर बनाना.
-</p>
-
+<h3>Photo Restoration</h3>
+<p>पुरानी और खराब फोटो को साफ एवं बेहतर बनाना.</p>
 </div>
 
 
 <div class="card">
-
 <div class="icon">📄</div>
-
-<h3>
-Document Restoration
-</h3>
-
-<p>
-पुराने और खराब documents की digital cleaning.
-</p>
-
+<h3>Document Restoration</h3>
+<p>पुराने और खराब documents की digital cleaning.</p>
 </div>
 
 
 <div class="card">
-
 <div class="icon">✨</div>
-
-<h3>
-Photo Enhancement
-</h3>
-
-<p>
-Photo की light, clarity और overall quality सुधारना.
-</p>
-
+<h3>Photo Enhancement</h3>
+<p>Photo की light, clarity और overall quality सुधारना.</p>
 </div>
 
 
 <div class="card">
-
 <div class="icon">🎨</div>
-
-<h3>
-Graphic Designing
-</h3>
-
-<p>
-Poster, card, resume और अन्य designing services.
-</p>
-
+<h3>Graphic Designing</h3>
+<p>Poster, card, resume और अन्य designing services.</p>
 </div>
 
 
 <div class="card">
-
 <div class="icon">🖨️</div>
-
-<h3>
-Photo Printing
-</h3>
-
-<p>
-Photo printing और professional print services.
-</p>
-
+<h3>Photo Printing</h3>
+<p>Photo printing और professional print services.</p>
 </div>
 
 
@@ -626,7 +618,6 @@ Photo printing और professional print services.
 हमारा काम
 </h2>
 
-
 <div
 class="gallery"
 id="githubGallery">
@@ -636,7 +627,6 @@ id="githubGallery">
 </div>
 
 </div>
-
 
 <p
 style="text-align:center;margin-top:20px;color:#68717d">
@@ -649,18 +639,16 @@ style="text-align:center;margin-top:20px;color:#68717d">
 
 
 <!-- =========================
-     LARGE PHOTO MODAL
+     PHOTO PREVIEW
 ========================= -->
 
 <div
 class="photo-modal"
 id="photoModal">
 
-
 <button
 class="close-modal"
-id="closeModal"
-aria-label="Close">
+id="closeModal">
 
 ×
 </button>
@@ -669,20 +657,15 @@ aria-label="Close">
 <div class="modal-nav">
 
 <button
-id="prevPhoto"
-aria-label="Previous">
+id="prevPhoto">
 
 ‹
-
 </button>
 
-
 <button
-id="nextPhoto"
-aria-label="Next">
+id="nextPhoto">
 
 ›
-
 </button>
 
 </div>
@@ -715,14 +698,12 @@ id="modalCaption">
 फोटो का काम भेजें
 </h2>
 
-
 <div class="order">
 
 <p>
 अपनी फोटो या काम की जानकारी WhatsApp पर भेजें।
 हम काम देखकर आपको कीमत और समय बता देंगे।
 </p>
-
 
 <a class="btn"
 href="https://wa.me/919451118011?text=नमस्ते%20Gayatri%20Studio,%20मैं%20अपना%20फोटो%20का%20काम%20भेजना%20चाहता%20हूँ।">
@@ -748,29 +729,85 @@ class="contact">
 GAYATRI STUDIO
 </h2>
 
-<p>
-📸 Photography & Photo Editing
-</p>
-
-<p>
-🧓 Photo Restoration
-</p>
-
-<p>
-📄 Document Services
-</p>
-
-<p>
-📱 WhatsApp: 9451118011
-</p>
+<div class="contact-info">
 
 
-<a class="btn"
-href="https://wa.me/919451118011?text=नमस्ते%20Gayatri%20Studio">
+<div class="contact-item">
+📍 <strong>Address:</strong><br>
+TARAWA CHAUK BILAUJHA, MAU
+</div>
 
-WhatsApp करें
+
+<div class="contact-item">
+📞 <strong>Mobile:</strong><br>
+
+<a href="tel:8601535214">
+8601535214
+</a>
+
+&nbsp;&nbsp; | &nbsp;&nbsp;
+
+<a href="tel:9451118011">
+9451118011
+</a>
+
+</div>
+
+
+<div class="contact-item">
+✉️ <strong>Email:</strong><br>
+
+<a href="mailto:gayatristudiophotoworld@gmail.com">
+
+gayatristudiophotoworld@gmail.com
 
 </a>
+
+</div>
+
+
+<div class="contact-item">
+🕚 <strong>Opening Hours:</strong><br>
+
+सुबह 11 बजे – रात 8 बजे
+
+</div>
+
+
+</div>
+
+
+<div class="contact-buttons">
+
+
+<a
+class="btn call-btn"
+href="tel:8601535214">
+
+📞 Call Now
+
+</a>
+
+
+<a
+class="btn"
+href="https://wa.me/919451118011?text=नमस्ते%20Gayatri%20Studio,%20मुझे%20फोटो%20का%20काम%20करवाना%20है।">
+
+📱 WhatsApp
+
+</a>
+
+
+<a
+class="btn email-btn"
+href="mailto:gayatristudiophotoworld@gmail.com">
+
+✉️ Email
+
+</a>
+
+
+</div>
 
 </section>
 
@@ -781,71 +818,75 @@ WhatsApp करें
 
 <footer>
 
-© 2026 GAYATRI STUDIO • All Rights Reserved
+<strong>GAYATRI STUDIO</strong>
+
+<br>
+
+Professional Photography • Photo Restoration • Digital Services
+
+<br><br>
+
+© 2026 Gayatri Studio • All Rights Reserved
 
 </footer>
 
 
 <!-- =========================
-     JAVASCRIPT
+     GITHUB AUTOMATIC GALLERY SCRIPT
 ========================= -->
 
 <script>
 
-/* ==========================================
-   GITHUB PHOTO GALLERY SETTINGS
-========================================== */
+const GITHUB_USERNAME =
+"awadheshbabita";
 
-const GITHUB_USERNAME = "awadheshbabita";
+const GITHUB_REPOSITORY =
+"gayatristudio";
 
-const GITHUB_REPOSITORY = "gayatristudio";
+const GITHUB_BRANCH =
+"main";
 
-const GITHUB_BRANCH = "main";
-
-
-/* GitHub API */
 
 const GITHUB_API =
 `https://api.github.com/repos/${GITHUB_USERNAME}/${GITHUB_REPOSITORY}/contents?ref=${GITHUB_BRANCH}`;
 
 
-/* Gallery */
-
 const gallery =
 document.getElementById("githubGallery");
 
 
-/* Modal */
-
 const photoModal =
 document.getElementById("photoModal");
+
 
 const modalImage =
 document.getElementById("modalImage");
 
+
 const modalCaption =
 document.getElementById("modalCaption");
+
 
 const closeModal =
 document.getElementById("closeModal");
 
+
 const prevPhoto =
 document.getElementById("prevPhoto");
+
 
 const nextPhoto =
 document.getElementById("nextPhoto");
 
-
-/* Store photos */
 
 let photos = [];
 
 let currentPhotoIndex = 0;
 
 
-/* ==========================================
+/* =========================
    IMAGE CHECK
-========================================== */
+========================= */
 
 function isImageFile(name){
 
@@ -863,26 +904,27 @@ function isImageFile(name){
 }
 
 
-/* ==========================================
-   FORMAT PHOTO NAME
-========================================== */
+/* =========================
+   PHOTO NAME
+========================= */
 
 function cleanPhotoName(name){
 
     return name
         .replace(/\.[^/.]+$/,"")
         .replace(/[_-]+/g," ")
-        .replace(/\b\w/g,
-        function(letter){
+        .replace(/\b\w/g,function(letter){
+
             return letter.toUpperCase();
+
         });
 
 }
 
 
-/* ==========================================
+/* =========================
    LOAD GALLERY
-========================================== */
+========================= */
 
 async function loadGallery(){
 
@@ -918,18 +960,21 @@ async function loadGallery(){
             isImageFile(file.name)
         )
         .map(file => ({
+
             name:file.name,
+
             url:file.download_url
+
         }));
 
-
-        /* अगर photo नहीं मिली */
 
         if(photos.length === 0){
 
             gallery.innerHTML =
             `<div class="gallery-error">
+
             📷 अभी Gallery में कोई photo नहीं मिली।
+
             </div>`;
 
             return;
@@ -937,12 +982,8 @@ async function loadGallery(){
         }
 
 
-        /* Gallery clear */
-
         gallery.innerHTML = "";
 
-
-        /* Create cards */
 
         photos.forEach(
             function(photo,index){
@@ -997,7 +1038,6 @@ async function loadGallery(){
             }
         );
 
-
     }
 
     catch(error){
@@ -1021,14 +1061,16 @@ async function loadGallery(){
 }
 
 
-/* ==========================================
+/* =========================
    OPEN PHOTO
-========================================== */
+========================= */
 
 function openPhoto(index){
 
     if(!photos.length){
+
         return;
+
     }
 
 
@@ -1061,29 +1103,31 @@ function openPhoto(index){
 }
 
 
-/* ==========================================
+/* =========================
    CLOSE PHOTO
-========================================== */
+========================= */
 
 function closePhoto(){
 
     photoModal.classList.remove("show");
 
+    modalImage.src = "";
 
-    document.body.style.overflow =
-    "";
+    document.body.style.overflow = "";
 
 }
 
 
-/* ==========================================
-   NEXT PHOTO
-========================================== */
+/* =========================
+   NEXT
+========================= */
 
 function showNextPhoto(){
 
     if(!photos.length){
+
         return;
+
     }
 
 
@@ -1097,14 +1141,16 @@ function showNextPhoto(){
 }
 
 
-/* ==========================================
-   PREVIOUS PHOTO
-========================================== */
+/* =========================
+   PREVIOUS
+========================= */
 
 function showPreviousPhoto(){
 
     if(!photos.length){
+
         return;
+
     }
 
 
@@ -1118,90 +1164,88 @@ function showPreviousPhoto(){
 }
 
 
-/* ==========================================
-   BUTTON EVENTS
-========================================== */
+/* =========================
+   BUTTONS
+========================= */
 
 closeModal.addEventListener(
-    "click",
-    closePhoto
+"click",
+closePhoto
 );
 
 
 nextPhoto.addEventListener(
-    "click",
-    showNextPhoto
+"click",
+showNextPhoto
 );
 
 
 prevPhoto.addEventListener(
-    "click",
-    showPreviousPhoto
+"click",
+showPreviousPhoto
 );
 
 
-/* ==========================================
-   CLICK OUTSIDE PHOTO
-========================================== */
+/* =========================
+   OUTSIDE CLICK
+========================= */
 
 photoModal.addEventListener(
-    "click",
-    function(event){
+"click",
+function(event){
 
-        if(event.target === photoModal){
+    if(event.target === photoModal){
 
-            closePhoto();
-
-        }
+        closePhoto();
 
     }
-);
+
+});
 
 
-/* ==========================================
-   KEYBOARD CONTROLS
-========================================== */
+/* =========================
+   KEYBOARD
+========================= */
 
 document.addEventListener(
-    "keydown",
-    function(event){
+"keydown",
+function(event){
 
-        if(
-            !photoModal.classList.contains("show")
-        ){
+    if(
+        !photoModal.classList.contains("show")
+    ){
 
-            return;
-
-        }
-
-
-        if(event.key === "Escape"){
-
-            closePhoto();
-
-        }
-
-
-        if(event.key === "ArrowRight"){
-
-            showNextPhoto();
-
-        }
-
-
-        if(event.key === "ArrowLeft"){
-
-            showPreviousPhoto();
-
-        }
+        return;
 
     }
-);
 
 
-/* ==========================================
-   LOAD GALLERY
-========================================== */
+    if(event.key === "Escape"){
+
+        closePhoto();
+
+    }
+
+
+    if(event.key === "ArrowRight"){
+
+        showNextPhoto();
+
+    }
+
+
+    if(event.key === "ArrowLeft"){
+
+        showPreviousPhoto();
+
+    }
+
+});
+
+
+/* =========================
+   START
+========================= */
 
 loadGallery();
 
@@ -1209,4 +1253,4 @@ loadGallery();
 
 
 </body>
-</html>
+   </html>
