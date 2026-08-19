@@ -4,9 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Gayatri Studio | Photography, CSC & Digital Services</title>
+<title>Gayatri Studio | Photography, CSC & Online Services</title>
 
 <style>
+
 *{
 box-sizing:border-box;
 margin:0;
@@ -18,7 +19,7 @@ scroll-behavior:smooth;
 }
 
 body{
-font-family:Arial,sans-serif;
+font-family:Arial,"Noto Sans Devanagari",sans-serif;
 background:#f5f7fb;
 color:#18202a;
 line-height:1.6;
@@ -38,26 +39,31 @@ letter-spacing:1px;
 }
 
 .tagline{
-font-size:17px;
+font-size:18px;
 margin-top:8px;
 color:#dbe7f5;
 }
 
 nav{
 background:white;
-padding:15px 8px;
+padding:14px 8px;
 text-align:center;
-box-shadow:0 2px 10px #0001;
+box-shadow:0 2px 10px #0002;
 position:sticky;
 top:0;
 z-index:100;
 }
 
 nav a{
+display:inline-block;
 text-decoration:none;
 color:#18202a;
 font-weight:bold;
-margin:0 10px;
+margin:5px 10px;
+}
+
+nav a:hover{
+color:#119b8b;
 }
 
 .hero{
@@ -68,57 +74,45 @@ background:linear-gradient(#eef5ff,#fff);
 
 .hero h1{
 font-size:38px;
-margin-bottom:18px;
+margin-bottom:20px;
 }
 
 .hero p{
 font-size:18px;
 color:#5d6673;
-max-width:780px;
+max-width:760px;
 margin:auto;
 }
 
 .btn{
 display:inline-block;
-margin-top:24px;
-padding:14px 25px;
+margin-top:28px;
+padding:15px 28px;
 border-radius:35px;
 background:#119b8b;
 color:white;
 text-decoration:none;
-font-size:17px;
+font-size:18px;
 font-weight:bold;
-border:0;
+border:none;
 cursor:pointer;
-transition:.3s;
 }
 
 .btn:hover{
-transform:translateY(-2px);
-opacity:.92;
+background:#087d70;
 }
 
 section{
 padding:55px 20px;
-max-width:1100px;
+max-width:1150px;
 margin:auto;
 }
 
 .section-title{
 text-align:center;
 font-size:32px;
-margin-bottom:12px;
+margin-bottom:35px;
 }
-
-.section-subtitle{
-text-align:center;
-color:#68717d;
-max-width:760px;
-margin:0 auto 35px;
-}
-
-
-/* ================= SERVICES ================= */
 
 .services{
 display:grid;
@@ -126,253 +120,59 @@ grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 gap:20px;
 }
 
-.service-card{
+.card{
 background:white;
 padding:28px 20px;
 border-radius:18px;
 box-shadow:0 5px 20px #00000012;
 text-align:center;
 cursor:pointer;
+transition:.25s;
 border:2px solid transparent;
-transition:.3s;
 }
 
-.service-card:hover{
+.card:hover{
 transform:translateY(-5px);
 border-color:#119b8b;
-box-shadow:0 10px 28px #00000018;
+box-shadow:0 10px 25px #0002;
 }
 
-.service-icon{
+.icon{
 font-size:45px;
 margin-bottom:10px;
 }
 
-.service-card h3{
+.card h3{
 margin-bottom:8px;
 }
 
-.service-card p{
+.card p{
 color:#68717d;
-font-size:15px;
 }
 
-.service-more{
-margin-top:12px;
+.card .select-text{
+display:inline-block;
+margin-top:14px;
 color:#119b8b;
 font-weight:bold;
 font-size:14px;
 }
 
-
-/* ================= SERVICE MODAL ================= */
-
-.service-modal{
-display:none;
-position:fixed;
-inset:0;
-z-index:5000;
-background:rgba(0,0,0,.80);
-align-items:center;
-justify-content:center;
-padding:18px;
-}
-
-.service-modal.show{
-display:flex;
-}
-
-.service-box{
-width:100%;
-max-width:650px;
-max-height:90vh;
-overflow:auto;
-background:white;
-border-radius:22px;
-padding:30px 24px;
-position:relative;
-box-shadow:0 15px 50px #0005;
-}
-
-.service-close{
-position:absolute;
-top:12px;
-right:14px;
-width:42px;
-height:42px;
-border:0;
-border-radius:50%;
-background:#eef1f5;
-font-size:28px;
-cursor:pointer;
-}
-
-.service-icon-large{
-text-align:center;
-font-size:55px;
-margin-bottom:8px;
-}
-
-.service-box h2{
-text-align:center;
-margin-bottom:10px;
-}
-
-.service-box .description{
-text-align:center;
-color:#626b76;
-margin-bottom:18px;
-}
-
-.service-list{
-list-style:none;
-margin:15px 0;
-}
-
-.service-list li{
-background:#f5f7fb;
-padding:10px 12px;
-margin:7px 0;
-border-radius:10px;
-}
-
-.service-order{
-text-align:center;
-}
-
-
-/* ================= ONLINE ORDER ================= */
-
-.order-section{
-background:linear-gradient(135deg,#eef8ff,#fff);
-max-width:1100px;
-}
-
-.order-box{
-background:white;
-max-width:720px;
-margin:auto;
-padding:30px 25px;
-border-radius:22px;
-box-shadow:0 7px 25px #00000012;
-}
-
-.order-intro{
-text-align:center;
-color:#626b76;
-margin-bottom:25px;
-}
-
-.form-group{
-margin-bottom:18px;
-}
-
-.form-group label{
-display:block;
-font-weight:bold;
-margin-bottom:7px;
-}
-
-.form-group input,
-.form-group select,
-.form-group textarea{
-width:100%;
-padding:13px 14px;
-border:1px solid #d7dde5;
-border-radius:10px;
-background:white;
-color:#18202a;
-font-size:16px;
-outline:none;
-}
-
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus{
-border-color:#119b8b;
-box-shadow:0 0 0 3px #119b8b18;
-}
-
-.form-group textarea{
-min-height:120px;
-resize:vertical;
-}
-
-.file-box{
-border:2px dashed #b9c5d3;
-border-radius:14px;
-padding:22px 15px;
-text-align:center;
-background:#fafbfd;
-}
-
-.file-box input{
-width:100%;
-border:0;
-padding:0;
-background:transparent;
-}
-
-.file-info{
-margin-top:10px;
-color:#68717d;
-font-size:14px;
-word-break:break-word;
-}
-
-.order-submit{
-width:100%;
-margin-top:5px;
-}
-
-.order-status{
-display:none;
-margin-top:18px;
-padding:14px;
-border-radius:12px;
-text-align:center;
-font-weight:bold;
-}
-
-.order-status.show{
-display:block;
-}
-
-.order-status.success{
-background:#e9f8ef;
-color:#16733a;
-}
-
-.order-status.error{
-background:#fff0f0;
-color:#a61b1b;
-}
-
-.order-note{
-margin-top:15px;
-padding:12px;
-background:#fff8e6;
-border-radius:10px;
-color:#6b5200;
-font-size:13px;
-}
-
-
-/* ================= GALLERY ================= */
+/* GALLERY */
 
 .gallery{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
-gap:20px;
+gap:18px;
 }
 
 .gallery-card{
 background:white;
 border-radius:18px;
 overflow:hidden;
-box-shadow:0 5px 20px #00000015;
+box-shadow:0 5px 20px #0002;
 cursor:pointer;
-transition:.3s;
+transition:.25s;
 }
 
 .gallery-card:hover{
@@ -382,199 +182,220 @@ transform:translateY(-5px);
 .gallery-card img{
 width:100%;
 height:260px;
-display:block;
 object-fit:cover;
-background:#e9eef5;
+display:block;
 }
 
 .gallery-caption{
-padding:13px 10px;
+padding:15px;
 text-align:center;
 font-weight:bold;
-color:#354052;
-font-size:14px;
-word-break:break-word;
 }
 
 .gallery-loading{
 grid-column:1/-1;
-text-align:center;
-padding:40px 20px;
-color:#68717d;
-font-size:18px;
-}
-
-.gallery-error{
-grid-column:1/-1;
-text-align:center;
+background:white;
 padding:30px;
+border-radius:18px;
+text-align:center;
+color:#68717d;
+}
+
+/* ORDER */
+
+.order{
 background:white;
-border-radius:16px;
-color:#b42318;
-}
-
-
-/* ================= PHOTO PREVIEW ================= */
-
-.photo-modal{
-display:none;
-position:fixed;
-z-index:6000;
-inset:0;
-background:rgba(0,0,0,.94);
-align-items:center;
-justify-content:center;
-padding:20px;
-}
-
-.photo-modal.show{
-display:flex;
-}
-
-.modal-content{
-max-width:95vw;
-max-height:90vh;
-display:flex;
-flex-direction:column;
-align-items:center;
-justify-content:center;
-}
-
-.modal-content img{
-max-width:95vw;
-max-height:80vh;
-width:auto;
-height:auto;
-object-fit:contain;
-border-radius:8px;
-box-shadow:0 10px 40px #000;
-}
-
-.modal-caption{
-color:white;
-font-size:16px;
-font-weight:bold;
-margin-top:12px;
+border-radius:20px;
+padding:35px 25px;
+box-shadow:0 5px 20px #0001;
 text-align:center;
 }
 
-.close-modal{
-position:absolute;
-top:12px;
-right:15px;
-width:48px;
-height:48px;
-border:0;
-border-radius:50%;
-background:white;
-color:#111;
-font-size:30px;
-cursor:pointer;
+.order p{
+color:#626b76;
+font-size:17px;
 }
 
-.modal-nav{
-position:absolute;
-left:0;
-right:0;
-top:50%;
-display:flex;
-justify-content:space-between;
-padding:0 15px;
-transform:translateY(-50%);
+.order-info{
+margin-top:20px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:12px;
 }
 
-.modal-nav button{
-width:48px;
-height:48px;
-border:0;
-border-radius:50%;
-background:#ffffffdd;
-color:#111;
-font-size:30px;
-cursor:pointer;
+.info-box{
+background:#f5f7fb;
+padding:15px;
+border-radius:12px;
 }
 
-
-/* ================= CONTACT ================= */
+/* CONTACT */
 
 .contact{
-max-width:none;
+text-align:center;
 background:#14253b;
 color:white;
-text-align:center;
-padding:60px 20px;
+max-width:none;
 }
 
-.contact h2{
-font-size:32px;
-margin-bottom:20px;
+.contact p{
+margin:8px;
 }
 
-.contact-info{
-max-width:700px;
-margin:auto;
+.contact .btn{
+background:#119b8b;
 }
 
-.contact-item{
-background:#ffffff12;
-border:1px solid #ffffff18;
-border-radius:14px;
-padding:14px;
-margin:10px auto;
-font-size:16px;
-}
-
-.contact-item a{
-color:white;
-text-decoration:none;
-font-weight:bold;
-}
-
-.contact-buttons{
-display:flex;
-justify-content:center;
-flex-wrap:wrap;
-gap:10px;
-margin-top:20px;
-}
-
-.contact-buttons .btn{
-margin-top:0;
-}
-
-.call-btn{
-background:#2563eb;
-}
-
-.email-btn{
-background:#7c3aed;
-}
-
-
-/* ================= FOOTER ================= */
+/* FOOTER */
 
 footer{
 background:#0d1928;
 color:#ccd6e0;
 text-align:center;
-padding:22px 15px;
+padding:20px;
 }
 
+/* MODAL */
 
-/* ================= MOBILE ================= */
+.modal{
+display:none;
+position:fixed;
+inset:0;
+background:#0009;
+z-index:1000;
+padding:20px;
+overflow-y:auto;
+}
+
+.modal.show{
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+.modal-box{
+background:white;
+width:100%;
+max-width:650px;
+border-radius:25px;
+padding:25px;
+position:relative;
+box-shadow:0 15px 50px #0005;
+max-height:90vh;
+overflow-y:auto;
+}
+
+.close-modal{
+position:absolute;
+right:18px;
+top:12px;
+border:none;
+background:#eef1f5;
+width:40px;
+height:40px;
+border-radius:50%;
+font-size:25px;
+cursor:pointer;
+}
+
+.modal-title{
+text-align:center;
+font-size:28px;
+margin:10px 35px 8px;
+}
+
+.modal-description{
+text-align:center;
+color:#68717d;
+margin-bottom:20px;
+}
+
+/* CHECKBOX */
+
+.option-list{
+display:flex;
+flex-direction:column;
+gap:10px;
+}
+
+.option{
+display:flex;
+align-items:center;
+gap:12px;
+background:#f5f7fb;
+padding:14px;
+border-radius:12px;
+cursor:pointer;
+font-size:17px;
+border:2px solid transparent;
+}
+
+.option:hover{
+border-color:#119b8b;
+}
+
+.option input{
+width:21px;
+height:21px;
+accent-color:#119b8b;
+}
+
+.option.selected{
+border-color:#119b8b;
+background:#edf9f7;
+}
+
+.selection-count{
+text-align:center;
+margin-top:18px;
+font-weight:bold;
+color:#119b8b;
+}
+
+.modal-actions{
+display:flex;
+gap:10px;
+justify-content:center;
+flex-wrap:wrap;
+margin-top:20px;
+}
+
+.secondary-btn{
+padding:13px 22px;
+border:none;
+border-radius:30px;
+background:#e9edf2;
+color:#18202a;
+font-weight:bold;
+cursor:pointer;
+}
+
+.whatsapp-btn{
+padding:14px 24px;
+border:none;
+border-radius:30px;
+background:#119b8b;
+color:white;
+font-weight:bold;
+font-size:16px;
+cursor:pointer;
+}
+
+/* BIG PHOTO MODAL */
+
+.photo-modal img{
+width:100%;
+max-height:75vh;
+object-fit:contain;
+border-radius:12px;
+}
+
+/* RESPONSIVE */
 
 @media(max-width:600px){
 
 .logo{
 font-size:27px;
-}
-
-.tagline{
-font-size:14px;
-}
-
-.hero{
-padding:45px 18px;
 }
 
 .hero h1{
@@ -585,89 +406,34 @@ font-size:30px;
 font-size:17px;
 }
 
-nav{
-padding:12px 3px;
-}
-
 nav a{
-margin:0 4px;
-font-size:13px;
+margin:4px 6px;
+font-size:14px;
 }
 
 section{
-padding:45px 15px;
+padding:42px 15px;
 }
 
 .section-title{
 font-size:28px;
 }
 
-.services{
-grid-template-columns:repeat(2,1fr);
-gap:12px;
+.modal{
+padding:10px;
 }
 
-.service-card{
-padding:20px 10px;
+.modal-box{
+padding:20px;
+border-radius:20px;
 }
 
-.service-icon{
-font-size:38px;
+.modal-title{
+font-size:24px;
 }
 
-.service-card h3{
+.option{
 font-size:16px;
-}
-
-.service-card p{
-font-size:13px;
-}
-
-.service-box{
-padding:28px 17px;
-}
-
-.order-box{
-padding:25px 16px;
-}
-
-.gallery{
-grid-template-columns:repeat(2,1fr);
-gap:12px;
-}
-
-.gallery-card img{
-height:190px;
-}
-
-.gallery-caption{
-font-size:12px;
-padding:9px 4px;
-}
-
-.modal-content img{
-max-width:94vw;
-max-height:76vh;
-}
-
-.modal-nav{
-padding:0 5px;
-}
-
-.modal-nav button{
-width:42px;
-height:42px;
-font-size:26px;
-}
-
-.close-modal{
-width:42px;
-height:42px;
-font-size:27px;
-}
-
-.contact h2{
-font-size:28px;
 }
 
 }
@@ -679,7 +445,7 @@ font-size:28px;
 <body>
 
 
-<!-- ================= HEADER ================= -->
+<!-- HEADER -->
 
 <header>
 
@@ -688,25 +454,28 @@ font-size:28px;
 </div>
 
 <div class="tagline">
-Photography • Photo Restoration • CSC • Digital Services
+Photography • Photo Restoration • CSC • Railway • Online Services
 </div>
 
 </header>
 
 
-<!-- ================= NAVIGATION ================= -->
+<!-- NAVIGATION -->
 
 <nav>
 
 <a href="#services">Services</a>
+
 <a href="#gallery">Gallery</a>
-<a href="#order">Order</a>
+
+<a href="#order">Online Order</a>
+
 <a href="#contact">Contact</a>
 
 </nav>
 
 
-<!-- ================= HERO ================= -->
+<!-- HERO -->
 
 <section class="hero">
 
@@ -715,22 +484,23 @@ Photography • Photo Restoration • CSC • Digital Services
 </h1>
 
 <p>
-Photography, Photo Restoration, Document Services,
-Graphic Designing, Printing, CSC, Online Forms और Railway Ticket Booking.
+Passport Photo, Photo Restoration, Document Restoration,
+Photo Enhancement, Graphic Designing, Photo Printing,
+जनसेवा केंद्र और Railway Ticket Booking की सेवाएँ।
 </p>
 
 <a
 class="btn"
-href="https://wa.me/919451118011?text=नमस्ते%20Gayatri%20Studio,%20मुझे%20काम%20करवाना%20है।">
-
-📱 अपना काम भेजें
-
+href="https://wa.me/919451118011?text=नमस्ते%20Gayatri%20Studio,%20मुझे%20फोटो%20या%20ऑनलाइन%20काम%20करवाना%20है।"
+target="_blank"
+>
+📱 WhatsApp पर काम भेजें
 </a>
 
 </section>
 
 
-<!-- ================= SERVICES ================= -->
+<!-- SERVICES -->
 
 <section id="services">
 
@@ -738,243 +508,165 @@ href="https://wa.me/919451118011?text=नमस्ते%20Gayatri%20Studio,%20�
 हमारी Services
 </h2>
 
-<p class="section-subtitle">
-किसी भी service card पर क्लिक करके पहले पूरी जानकारी देखें।
-WhatsApp केवल popup के अंदर दिए गए button से खुलेगा।
-</p>
-
-
 <div class="services">
 
 
 <!-- 1 -->
 
-<div
-class="service-card"
-role="button"
-tabindex="0"
-onclick="openService(0)"
-onkeydown="serviceKey(event,0)"
->
+<div class="card"
+onclick="openService('passport')">
 
-<div class="service-icon">
-📸
-</div>
+<div class="icon">📸</div>
 
-<h3>
-Passport Photo
-</h3>
+<h3>Passport Photo</h3>
 
 <p>
 Passport, Visa, ID और Application Photos
 </p>
 
-<div class="service-more">
-पूरी जानकारी देखें →
-</div>
+<span class="select-text">
+काम चुनने के लिए क्लिक करें →
+</span>
 
 </div>
 
 
 <!-- 2 -->
 
-<div
-class="service-card"
-role="button"
-tabindex="0"
-onclick="openService(1)"
-onkeydown="serviceKey(event,1)"
->
+<div class="card"
+onclick="openService('restoration')">
 
-<div class="service-icon">
-🧓
-</div>
+<div class="icon">🧓</div>
 
-<h3>
-Photo Restoration
-</h3>
+<h3>Photo Restoration</h3>
 
 <p>
-पुरानी और खराब फोटो की Restoration
+पुरानी और खराब फोटो को नया रूप देना
 </p>
 
-<div class="service-more">
-पूरी जानकारी देखें →
-</div>
+<span class="select-text">
+काम चुनने के लिए क्लिक करें →
+</span>
 
 </div>
 
 
 <!-- 3 -->
 
-<div
-class="service-card"
-role="button"
-tabindex="0"
-onclick="openService(2)"
-onkeydown="serviceKey(event,2)"
->
+<div class="card"
+onclick="openService('document')">
 
-<div class="service-icon">
-📄
-</div>
+<div class="icon">📄</div>
 
-<h3>
-Document Restoration
-</h3>
+<h3>Document Restoration</h3>
 
 <p>
-पुराने Documents की Digital Cleaning
+पुराने और खराब Documents की Cleaning
 </p>
 
-<div class="service-more">
-पूरी जानकारी देखें →
-</div>
+<span class="select-text">
+काम चुनने के लिए क्लिक करें →
+</span>
 
 </div>
 
 
 <!-- 4 -->
 
-<div
-class="service-card"
-role="button"
-tabindex="0"
-onclick="openService(3)"
-onkeydown="serviceKey(event,3)"
->
+<div class="card"
+onclick="openService('enhancement')">
 
-<div class="service-icon">
-✨
-</div>
+<div class="icon">✨</div>
 
-<h3>
-Photo Enhancement
-</h3>
+<h3>Photo Enhancement</h3>
 
 <p>
-Light, Color, Clarity और Quality Improvement
+Light, Color, Sharpness और Quality सुधारना
 </p>
 
-<div class="service-more">
-पूरी जानकारी देखें →
-</div>
+<span class="select-text">
+काम चुनने के लिए क्लिक करें →
+</span>
 
 </div>
 
 
 <!-- 5 -->
 
-<div
-class="service-card"
-role="button"
-tabindex="0"
-onclick="openService(4)"
-onkeydown="serviceKey(event,4)"
->
+<div class="card"
+onclick="openService('design')">
 
-<div class="service-icon">
-🎨
-</div>
+<div class="icon">🎨</div>
 
-<h3>
-Graphic Designing
-</h3>
+<h3>Graphic Designing</h3>
 
 <p>
-Resume, Card, Poster, Banner और Design Work
+Poster, Resume, Card और Digital Designs
 </p>
 
-<div class="service-more">
-पूरी जानकारी देखें →
-</div>
+<span class="select-text">
+काम चुनने के लिए क्लिक करें →
+</span>
 
 </div>
 
 
 <!-- 6 -->
 
-<div
-class="service-card"
-role="button"
-tabindex="0"
-onclick="openService(5)"
-onkeydown="serviceKey(event,5)"
->
+<div class="card"
+onclick="openService('printing')">
 
-<div class="service-icon">
-🖨️
-</div>
+<div class="icon">🖨️</div>
 
-<h3>
-Photo Printing
-</h3>
+<h3>Photo Printing</h3>
 
 <p>
-Photo और Document Printing
+Photo और Document Printing Services
 </p>
 
-<div class="service-more">
-पूरी जानकारी देखें →
-</div>
+<span class="select-text">
+काम चुनने के लिए क्लिक करें →
+</span>
 
 </div>
 
 
 <!-- 7 -->
 
-<div
-class="service-card"
-role="button"
-tabindex="0"
-onclick="openService(6)"
-onkeydown="serviceKey(event,6)"
->
+<div class="card"
+onclick="openService('csc')">
 
-<div class="service-icon">
-🏛️
-</div>
+<div class="icon">🏛️</div>
 
-<h3>
-CSC / जनसेवा केंद्र
-</h3>
+<h3>CSC / जनसेवा केंद्र</h3>
 
 <p>
-Online Forms और Citizen Services
+Aadhaar, PAN, Voter और Online Forms
 </p>
 
-<div class="service-more">
-पूरी जानकारी देखें →
-</div>
+<span class="select-text">
+काम चुनने के लिए क्लिक करें →
+</span>
 
 </div>
 
 
 <!-- 8 -->
 
-<div
-class="service-card"
-role="button"
-tabindex="0"
-onclick="openService(7)"
-onkeydown="serviceKey(event,7)"
->
+<div class="card"
+onclick="openService('railway')">
 
-<div class="service-icon">
-🚆
-</div>
+<div class="icon">🚆</div>
 
-<h3>
-Railway Ticket Booking
-</h3>
+<h3>Railway Ticket Booking</h3>
 
 <p>
-Normal और Tatkal Ticket Assistance
+Normal और Tatkal Ticket Booking
 </p>
 
-<div class="service-more">
-पूरी जानकारी देखें →
-</div>
+<span class="select-text">
+काम चुनने के लिए क्लिक करें →
+</span>
 
 </div>
 
@@ -984,310 +676,13 @@ Normal और Tatkal Ticket Assistance
 </section>
 
 
-<!-- ================= SERVICE POPUP ================= -->
-
-<div
-class="service-modal"
-id="serviceModal"
-aria-hidden="true"
->
-
-<div
-class="service-box"
-onclick="event.stopPropagation()"
->
-
-<button
-type="button"
-class="service-close"
-onclick="closeService()"
-aria-label="Close"
->
-×
-</button>
-
-
-<div
-class="service-icon-large"
-id="serviceIcon"
->
-📸
-</div>
-
-
-<h2 id="serviceTitle">
-Service
-</h2>
-
-
-<p
-class="description"
-id="serviceDescription"
->
-Service Details
-</p>
-
-
-<ul
-class="service-list"
-id="serviceList"
->
-</ul>
-
-
-<div class="service-order">
-
-<a
-class="btn"
-id="serviceWhatsApp"
-href="#"
-target="_blank"
-rel="noopener"
-onclick="event.stopPropagation()"
->
-
-📱 WhatsApp पर काम भेजें
-
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-
-<!-- ================= ONLINE ORDER ================= -->
-
-<section
-id="order"
-class="order-section"
->
-
-<h2 class="section-title">
-ऑनलाइन काम भेजें
-</h2>
-
-<p class="section-subtitle">
-अपनी जानकारी और फोटो भरकर सीधे Gayatri Studio को order भेजें।
-</p>
-
-
-<div class="order-box">
-
-<p class="order-intro">
-फॉर्म भरें और Submit करने के बाद आपका order हमारे online system में जाएगा।
-</p>
-
-
-<form id="orderForm">
-
-
-<div class="form-group">
-
-<label for="customerName">
-👤 आपका नाम
-</label>
-
-<input
-type="text"
-id="customerName"
-placeholder="अपना नाम लिखें"
-required
->
-
-</div>
-
-
-<div class="form-group">
-
-<label for="customerMobile">
-📱 मोबाइल नंबर
-</label>
-
-<input
-type="tel"
-id="customerMobile"
-placeholder="अपना मोबाइल नंबर लिखें"
-inputmode="numeric"
-required
->
-
-</div>
-
-
-<div class="form-group">
-
-<label for="customerEmail">
-✉️ Email
-</label>
-
-<input
-type="email"
-id="customerEmail"
-placeholder="Email (optional)"
->
-
-</div>
-
-
-<div class="form-group">
-
-<label for="orderService">
-🛠️ कौन-सा काम करवाना है?
-</label>
-
-<select
-id="orderService"
-required
->
-
-<option value="">
--- Service चुनें --
-</option>
-
-<option value="Passport Photo">
-📸 Passport Photo
-</option>
-
-<option value="Photo Restoration">
-🧓 Photo Restoration
-</option>
-
-<option value="Document Restoration">
-📄 Document Restoration
-</option>
-
-<option value="Photo Enhancement">
-✨ Photo Enhancement
-</option>
-
-<option value="Graphic Designing">
-🎨 Graphic Designing
-</option>
-
-<option value="Photo Printing">
-🖨️ Photo Printing
-</option>
-
-<option value="CSC / जनसेवा केंद्र">
-🏛️ CSC / जनसेवा केंद्र
-</option>
-
-<option value="Railway Ticket Booking">
-🚆 Railway Ticket Booking
-</option>
-
-</select>
-
-</div>
-
-
-<div class="form-group">
-
-<label for="subService">
-📌 किस प्रकार का काम?
-</label>
-
-<select
-id="subService"
->
-
-<option value="">
--- पहले Service चुनें --
-</option>
-
-</select>
-
-</div>
-
-
-<div class="form-group">
-
-<label for="orderDetails">
-📝 काम की पूरी जानकारी
-</label>
-
-<textarea
-id="orderDetails"
-placeholder="उदाहरण: 4 passport photos चाहिए, पुरानी फोटो restore करनी है, A4 print चाहिए आदि."
-required
-></textarea>
-
-</div>
-
-
-<div class="form-group">
-
-<label>
-📎 फोटो / File Upload
-</label>
-
-<div class="file-box">
-
-<input
-type="file"
-id="orderFile"
-accept="image/*,.pdf,.doc,.docx"
->
-
-<div
-class="file-info"
-id="fileInfo"
->
-अभी कोई file select नहीं की गई।
-</div>
-
-</div>
-
-</div>
-
-
-<button
-type="submit"
-class="btn order-submit"
-id="submitButton"
->
-
-📤 Order Submit करें
-
-</button>
-
-
-<div
-class="order-status"
-id="orderStatus"
->
-</div>
-
-
-</form>
-
-
-<div class="order-note">
-
-<strong>नोट:</strong>
-Submit करने के बाद order details और selected photo backend पर भेजी जाएँगी।
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- ================= GALLERY ================= -->
+<!-- GALLERY -->
 
 <section id="gallery">
 
 <h2 class="section-title">
 हमारा काम
 </h2>
-
-<p class="section-subtitle">
-किसी photo पर क्लिक करके बड़ा preview देखें।
-</p>
-
 
 <div
 class="gallery"
@@ -1300,63 +695,65 @@ id="githubGallery"
 
 </div>
 
+<p style="text-align:center;margin-top:20px;color:#68717d">
+फोटो को बड़ा देखने के लिए किसी भी फोटो पर क्लिक करें।
+</p>
+
 </section>
 
 
-<!-- ================= PHOTO PREVIEW ================= -->
+<!-- ONLINE ORDER -->
 
-<div
-class="photo-modal"
-id="photoModal"
->
+<section id="order">
+
+<h2 class="section-title">
+Online Order
+</h2>
+
+<div class="order">
+
+<p>
+अपना काम चुनें और WhatsApp पर फोटो/Document भेजें।
+हम काम देखकर आपको कीमत और समय बता देंगे।
+</p>
+
+<div class="order-info">
+
+<div class="info-box">
+📍 <b>स्थान</b><br>
+Tarawa Chauk, Bilaujha, Mau
+</div>
+
+<div class="info-box">
+📱 <b>Mobile</b><br>
+8601535214
+</div>
+
+<div class="info-box">
+📱 <b>WhatsApp</b><br>
+9451118011
+</div>
+
+<div class="info-box">
+⏰ <b>समय</b><br>
+सुबह 11 बजे – रात 8 बजे
+</div>
+
+</div>
 
 <button
-class="close-modal"
-id="closeModal"
+class="btn"
+onclick="openService('passport')"
 >
-×
-</button>
-
-
-<div class="modal-nav">
-
-<button
-type="button"
-id="prevPhoto"
->
-‹
-</button>
-
-<button
-type="button"
-id="nextPhoto"
->
-›
+📋 अपना काम चुनें
 </button>
 
 </div>
 
-
-<div class="modal-content">
-
-<img
-id="modalImage"
-src=""
-alt="Gayatri Studio Photo"
->
-
-<div
-class="modal-caption"
-id="modalCaption"
->
-</div>
-
-</div>
-
-</div>
+</section>
 
 
-<!-- ================= CONTACT ================= -->
+<!-- CONTACT -->
 
 <section
 id="contact"
@@ -1367,368 +764,523 @@ class="contact"
 GAYATRI STUDIO
 </h2>
 
+<p>
+📸 Photography & Photo Editing
+</p>
 
-<div class="contact-info">
+<p>
+🧓 Photo Restoration
+</p>
 
+<p>
+📄 Document Services
+</p>
 
-<div class="contact-item">
+<p>
+🏛️ CSC / जनसेवा केंद्र
+</p>
 
-📍 <strong>Address:</strong><br>
+<p>
+🚆 Railway Ticket Booking
+</p>
 
-TARAWA CHAUK BILAUJHA, MAU
+<p>
+📍 Tarawa Chauk, Bilaujha, Mau
+</p>
 
-</div>
+<p>
+📱 8601535214 | 9451118011
+</p>
 
+<p>
+📧 gayatristudiophotoworld@gmail.com
+</p>
 
-<div class="contact-item">
-
-📞 <strong>Mobile:</strong><br>
-
-<a href="tel:8601535214">
-8601535214
-</a>
-
-&nbsp;&nbsp; | &nbsp;&nbsp;
-
-<a href="tel:9451118011">
-9451118011
-</a>
-
-</div>
-
-
-<div class="contact-item">
-
-✉️ <strong>Email:</strong><br>
-
-<a
-href="mailto:gayatristudiophotoworld@gmail.com"
->
-gayatristudiophotoworld@gmail.com
-</a>
-
-</div>
-
-
-<div class="contact-item">
-
-🕚 <strong>Opening Hours:</strong><br>
-
-सुबह 11 बजे – रात 8 बजे
-
-</div>
-
-
-</div>
-
-
-<div class="contact-buttons">
-
-<a
-class="btn call-btn"
-href="tel:8601535214"
->
-📞 Call Now
-</a>
-
+<p>
+⏰ सुबह 11 बजे – रात 8 बजे
+</p>
 
 <a
 class="btn"
-href="https://wa.me/919451118011?text=नमस्ते%20Gayatri%20Studio,%20मुझे%20काम%20करवाना%20है।"
+href="https://wa.me/919451118011?text=नमस्ते%20Gayatri%20Studio"
 target="_blank"
-rel="noopener"
 >
-📱 WhatsApp
+📱 WhatsApp करें
 </a>
-
-
-<a
-class="btn email-btn"
-href="mailto:gayatristudiophotoworld@gmail.com"
->
-✉️ Email
-</a>
-
-</div>
 
 </section>
 
 
-<!-- ================= FOOTER ================= -->
+<!-- FOOTER -->
 
 <footer>
-
-<strong>
-GAYATRI STUDIO
-</strong>
-
-<br>
-
-Professional Photography • Photo Restoration • CSC • Digital Services
-
-<br><br>
 
 © 2026 GAYATRI STUDIO • All Rights Reserved
 
 </footer>
 
 
+
+<!-- SERVICE SELECTION MODAL -->
+
+<div
+class="modal"
+id="serviceModal"
+>
+
+<div class="modal-box">
+
+<button
+class="close-modal"
+onclick="closeService()"
+>
+×
+</button>
+
+<h2
+class="modal-title"
+id="modalTitle"
+>
+Service
+</h2>
+
+<p
+class="modal-description"
+id="modalDescription"
+>
+अपना काम चुनें
+</p>
+
+
+<div
+class="option-list"
+id="optionList"
+>
+</div>
+
+
+<div
+class="selection-count"
+id="selectionCount"
+>
+0 काम चुना गया
+</div>
+
+
+<div class="modal-actions">
+
+<button
+class="secondary-btn"
+onclick="closeService()"
+>
+बंद करें
+</button>
+
+<button
+class="whatsapp-btn"
+onclick="sendSelectedToWhatsApp()"
+>
+📱 चुने हुए काम के साथ WhatsApp भेजें
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- BIG PHOTO MODAL -->
+
+<div
+class="modal"
+id="photoModal"
+onclick="closePhoto(event)"
+>
+
+<div class="modal-box photo-modal">
+
+<button
+class="close-modal"
+onclick="closePhoto()"
+>
+×
+</button>
+
+<img
+id="largePhoto"
+src=""
+alt="Gayatri Studio Photo"
+>
+
+</div>
+
+</div>
+
+
+
 <script>
 
-/* =====================================================
-   IMPORTANT BACKEND URL
-===================================================== */
+
+/* ================================
+   STUDIO INFORMATION
+================================ */
+
+const WHATSAPP_NUMBER = "919451118011";
+
+const STUDIO_EMAIL =
+"gayatristudiophotoworld@gmail.com";
+
+const STUDIO_MOBILE =
+"8601535214";
+
+const STUDIO_ADDRESS =
+"Tarawa Chauk, Bilaujha, Mau";
+
+const STUDIO_TIME =
+"सुबह 11 बजे – रात 8 बजे";
+
+
+/* ================================
+   GOOGLE APPS SCRIPT BACKEND
+================================ */
 
 const BACKEND_URL =
 "https://script.google.com/macros/s/AKfycbxuJN-TU8jkuz4VOPAW2QL-sXKOHrO3drai2zMUyRDc83oWchq8Jm4hCpvyWYLRJkrdoQ/exec";
 
 
-/* =====================================================
-   SERVICE DATA
-===================================================== */
+/* ================================
+   SERVICES DATA
+================================ */
 
-const services = [
+const services = {
 
-{
-icon:"📸",
-title:"Passport Photo",
-description:"Passport, Visa, ID और विभिन्न application के लिए professional photo preparation.",
-items:[
+passport:{
+
+title:"📸 Passport Photo",
+
+description:
+"अपनी जरूरत के अनुसार Photo Service चुनें।",
+
+options:[
+
 "Passport Size Photo",
+
 "Visa Photo",
+
 "ID Card Photo",
+
 "Application Photo",
+
 "School / College Photo",
+
 "Job Application Photo",
+
 "Background Adjustment",
+
 "Required Size Photo"
+
 ]
+
 },
 
-{
-icon:"🧓",
-title:"Photo Restoration",
-description:"पुरानी, फटी, धुंधली या damaged photographs की digital restoration.",
-items:[
-"Old Photo Repair",
-"Torn Photo Repair",
+
+restoration:{
+
+title:"🧓 Photo Restoration",
+
+description:
+"पुरानी फोटो में से अपनी जरूरत के काम चुनें।",
+
+options:[
+
+"Old Photo Restoration",
+
 "Scratch Removal",
-"Dust & Spot Removal",
-"Black & White Restoration",
-"Color Restoration",
-"Faded Photo Improvement",
-"Damaged Area Restoration"
-]
-},
 
-{
-icon:"📄",
-title:"Document Restoration",
-description:"पुराने और खराब documents को साफ करके digital और print-ready बनाने की service.",
-items:[
-"Old Document Cleaning",
-"Faded Text Enhancement",
-"Document Scan Cleaning",
-"Torn Document Cleanup",
+"Damaged Photo Repair",
+
+"Black & White Photo Restoration",
+
+"Old Photo Colorization",
+
+"Face / Detail Cleaning",
+
 "Background Cleaning",
-"Text Clarity Improvement",
-"Document Alignment",
-"Print-ready Preparation"
+
+"Photo Repair & Enhancement"
+
 ]
+
 },
 
-{
-icon:"✨",
-title:"Photo Enhancement",
-description:"Photo की brightness, color, clarity और overall presentation improve करना.",
-items:[
-"Brightness Correction",
-"Light Adjustment",
+
+document:{
+
+title:"📄 Document Restoration",
+
+description:
+"Document की Cleaning और Restoration के लिए काम चुनें।",
+
+options:[
+
+"Document Cleaning",
+
+"Old Document Restoration",
+
+"Text Cleaning",
+
+"Background Cleaning",
+
+"Fold / Damage Repair",
+
+"Stamp / Seal Cleaning",
+
+"Document Enhancement",
+
+"Print Ready Document"
+
+]
+
+},
+
+
+enhancement:{
+
+title:"✨ Photo Enhancement",
+
+description:
+"Photo Enhancement में अपनी जरूरत के काम चुनें।",
+
+options:[
+
+"Brightness / Light Adjustment",
+
 "Color Correction",
-"Sharpness Improvement",
-"Clarity Enhancement",
+
+"Sharpness Enhancement",
+
+"Face Detail Enhancement",
+
 "Noise Reduction",
-"Portrait Enhancement",
-"Professional Finish"
+
+"Natural Skin Smoothing",
+
+"Background Adjustment",
+
+"Professional Photo Enhancement"
+
 ]
+
 },
 
-{
-icon:"🎨",
-title:"Graphic Designing",
-description:"Business, personal और print needs के लिए graphic designing.",
-items:[
+
+design:{
+
+title:"🎨 Graphic Designing",
+
+description:
+"Designing Service में अपना काम चुनें।",
+
+options:[
+
 "Resume / CV Design",
+
 "Visiting Card",
-"Wedding Invitation Card",
-"Birthday Design",
+
 "Poster Design",
+
 "Banner Design",
+
+"Invitation Card",
+
 "ID Card Design",
-"School / College Design",
-"Social Media Design",
+
 "Certificate Design",
-"Letterhead Design",
-"Custom Design"
+
+"Social Media Design",
+
+"Logo Design",
+
+"Other Graphic Design"
+
 ]
+
 },
 
-{
-icon:"🖨️",
-title:"Photo Printing",
-description:"अलग-अलग जरूरत के अनुसार photo और document printing.",
-items:[
+
+printing:{
+
+title:"🖨️ Photo Printing",
+
+description:
+"Printing के लिए Photo या Document Size चुनें।",
+
+options:[
+
 "Passport Photo Print",
-"4 × 6 inch",
-"5 × 7 inch",
-"6 × 8 inch",
-"8 × 10 inch",
-"8 × 12 inch",
-"A4",
-"A3",
-"Color Printing",
-"Black & White Printing",
-"Custom Size Printing"
+
+"4 × 6 Inch Photo",
+
+"5 × 7 Inch Photo",
+
+"6 × 8 Inch Photo",
+
+"8 × 10 Inch Photo",
+
+"A4 Photo Print",
+
+"A3 Photo Print",
+
+"Document Print",
+
+"Color Print",
+
+"Black & White Print",
+
+"Photo Album Printing"
+
 ]
+
 },
 
-{
-icon:"🏛️",
-title:"CSC / जनसेवा केंद्र",
-description:"CSC और online citizen services के लिए सहायता.",
-items:[
-"Aadhaar Related Assistance",
-"PAN Card Related Assistance",
-"Voter Card Related Assistance",
-"Online Government Services",
-"Online Citizen Services",
+
+csc:{
+
+title:"🏛️ CSC / जनसेवा केंद्र",
+
+description:
+"जनसेवा केंद्र की जरूरत वाली Service चुनें।",
+
+options:[
+
+"Aadhaar Related Service",
+
+"PAN Card",
+
+"Voter ID",
+
+"Income Certificate",
+
+"Domicile / निवास प्रमाण पत्र",
+
+"Caste Certificate",
+
+"Birth / Death Certificate",
+
 "Online Form Filling",
-"Application Form Assistance",
-"Document Upload",
-"Online Application Assistance",
-"Print & Scan",
-"Digital Service Assistance"
+
+"Government Online Form",
+
+"Print / Scan / Photocopy",
+
+"Other CSC Service"
+
 ]
+
 },
 
-{
-icon:"🚆",
-title:"Railway Ticket Booking",
-description:"रेल यात्रा के लिए online railway ticket booking assistance.",
-items:[
+
+railway:{
+
+title:"🚆 Railway Ticket Booking",
+
+description:
+"Railway Ticket Booking की Service चुनें।",
+
+options:[
+
 "Normal Railway Ticket",
-"Tatkal Ticket",
-"Journey Details Assistance",
-"Passenger Details Assistance",
-"Ticket Status Assistance",
-"Online Railway Services",
-"Booking Related Assistance"
+
+"Tatkal Railway Ticket",
+
+"Railway Reservation",
+
+"Railway Ticket Cancellation",
+
+"Ticket Status / PNR",
+
+"Other Railway Service"
+
 ]
-}
-
-];
-
-
-/* =====================================================
-   SERVICE CARD KEYBOARD
-===================================================== */
-
-function serviceKey(event,index){
-
-if(event.key==="Enter" || event.key===" "){
-
-event.preventDefault();
-
-openService(index);
 
 }
 
+};
+
+
+/* ================================
+   OPEN SERVICE MODAL
+================================ */
+
+let currentService = null;
+
+
+function openService(serviceKey){
+
+currentService = serviceKey;
+
+const service =
+services[serviceKey];
+
+if(!service){
+return;
 }
 
+document.getElementById("modalTitle")
+.innerText = service.title;
 
-/* =====================================================
-   OPEN SERVICE
-===================================================== */
-
-function openService(index){
-
-const service=services[index];
-
-document.getElementById("serviceIcon").textContent=
-service.icon;
-
-document.getElementById("serviceTitle").textContent=
-service.title;
-
-document.getElementById("serviceDescription").textContent=
-service.description;
+document.getElementById("modalDescription")
+.innerText = service.description;
 
 
-const list=
-document.getElementById("serviceList");
+const list =
+document.getElementById("optionList");
 
-list.innerHTML="";
+list.innerHTML = "";
 
 
-service.items.forEach(function(item){
+service.options.forEach(
+function(option,index){
 
-const li=
-document.createElement("li");
+const label =
+document.createElement("label");
 
-li.textContent="✓ "+item;
+label.className = "option";
 
-list.appendChild(li);
+
+label.innerHTML = `
+
+<input
+type="checkbox"
+value="${escapeHTML(option)}"
+onchange="updateSelection()"
+>
+
+<span>${escapeHTML(option)}</span>
+
+`;
+
+list.appendChild(label);
 
 });
 
 
-/*
- * WhatsApp link is created ONLY here.
- * Service card itself has NO WhatsApp link.
- */
-
-const message=
-"नमस्ते Gayatri Studio, मुझे "+
-service.title+
-" की service चाहिए। कृपया जानकारी और कीमत बताएं।";
-
-
-const whatsappButton=
-document.getElementById("serviceWhatsApp");
-
-
-whatsappButton.href=
-"https://wa.me/919451118011?text="+
-encodeURIComponent(message);
-
-
-whatsappButton.setAttribute(
-"data-service",
-service.title
-);
-
+updateSelection();
 
 document
 .getElementById("serviceModal")
 .classList.add("show");
-
-
-document
-.getElementById("serviceModal")
-.setAttribute(
-"aria-hidden",
-"false"
-);
-
 
 document.body.style.overflow="hidden";
 
 }
 
 
-/* =====================================================
-   CLOSE SERVICE
-===================================================== */
+/* ================================
+   CLOSE SERVICE MODAL
+================================ */
 
 function closeService(){
 
@@ -1736,929 +1288,484 @@ document
 .getElementById("serviceModal")
 .classList.remove("show");
 
-
-document
-.getElementById("serviceModal")
-.setAttribute(
-"aria-hidden",
-"true"
-);
-
-
 document.body.style.overflow="";
 
+currentService = null;
+
 }
 
 
-/*
- * IMPORTANT:
- * Clicking background closes popup.
- * Clicking inside service box does NOT close it.
- */
+/* ================================
+   UPDATE CHECKBOX SELECTION
+================================ */
+
+function updateSelection(){
+
+const checked =
+document.querySelectorAll(
+"#optionList input[type='checkbox']:checked"
+);
+
+const count =
+checked.length;
+
+document.getElementById("selectionCount")
+.innerText =
+count +
+(count === 1 ? " काम चुना गया" : " काम चुने गए");
+
 
 document
-.getElementById("serviceModal")
-.addEventListener(
-"click",
-function(event){
+.querySelectorAll("#optionList .option")
+.forEach(function(label){
 
-if(
-event.target ===
-document.getElementById("serviceModal")
-){
+const checkbox =
+label.querySelector("input");
 
-closeService();
+if(checkbox.checked){
 
-}
+label.classList.add("selected");
 
-}
-);
+}else{
 
-
-/* =====================================================
-   SUB SERVICE
-===================================================== */
-
-const orderService=
-document.getElementById("orderService");
-
-const subService=
-document.getElementById("subService");
-
-
-orderService.addEventListener(
-"change",
-function(){
-
-const selected=
-services.find(
-function(service){
-
-return service.title===
-orderService.value;
+label.classList.remove("selected");
 
 }
-);
-
-
-subService.innerHTML="";
-
-
-if(!selected){
-
-const option=
-document.createElement("option");
-
-option.value="";
-
-option.textContent=
-"-- पहले Service चुनें --";
-
-subService.appendChild(option);
-
-return;
-
-}
-
-
-const firstOption=
-document.createElement("option");
-
-firstOption.value="";
-
-firstOption.textContent=
-"-- काम चुनें --";
-
-subService.appendChild(firstOption);
-
-
-selected.items.forEach(
-function(item){
-
-const option=
-document.createElement("option");
-
-option.value=item;
-
-option.textContent=item;
-
-subService.appendChild(option);
-
-}
-);
-
-}
-);
-
-
-/* =====================================================
-   FILE SELECTION
-===================================================== */
-
-const orderFile=
-document.getElementById("orderFile");
-
-const fileInfo=
-document.getElementById("fileInfo");
-
-
-orderFile.addEventListener(
-"change",
-function(){
-
-if(!orderFile.files.length){
-
-fileInfo.textContent=
-"अभी कोई file select नहीं की गई।";
-
-return;
-
-}
-
-
-const file=
-orderFile.files[0];
-
-
-const sizeKB=
-Math.round(file.size/1024);
-
-
-fileInfo.textContent=
-"Selected: "+
-file.name+
-" ("+
-sizeKB+
-" KB)";
-
-}
-);
-
-
-/* =====================================================
-   FILE TO BASE64
-===================================================== */
-
-function fileToBase64(file){
-
-return new Promise(
-function(resolve,reject){
-
-const reader=
-new FileReader();
-
-
-reader.onload=
-function(){
-
-resolve(reader.result);
-
-};
-
-
-reader.onerror=
-function(){
-
-reject(
-new Error(
-"File पढ़ी नहीं जा सकी।"
-)
-);
-
-};
-
-
-reader.readAsDataURL(file);
-
-}
-);
-
-}
-
-
-/* =====================================================
-   ORDER STATUS
-===================================================== */
-
-function showOrderStatus(
-message,
-type
-){
-
-const status=
-document.getElementById(
-"orderStatus"
-);
-
-status.textContent=
-message;
-
-status.className=
-"order-status show "+
-type;
-
-}
-
-
-/* =====================================================
-   ONLINE ORDER SUBMIT
-===================================================== */
-
-document
-.getElementById("orderForm")
-.addEventListener(
-"submit",
-async function(event){
-
-event.preventDefault();
-
-
-const button=
-document.getElementById(
-"submitButton"
-);
-
-
-const name=
-document
-.getElementById("customerName")
-.value.trim();
-
-
-const mobile=
-document
-.getElementById("customerMobile")
-.value.trim();
-
-
-const email=
-document
-.getElementById("customerEmail")
-.value.trim();
-
-
-const service=
-document
-.getElementById("orderService")
-.value;
-
-
-const sub=
-document
-.getElementById("subService")
-.value;
-
-
-const details=
-document
-.getElementById("orderDetails")
-.value.trim();
-
-
-const file=
-orderFile.files.length
-?
-orderFile.files[0]
-:
-null;
-
-
-if(
-!name ||
-!mobile ||
-!service ||
-!details
-){
-
-showOrderStatus(
-"कृपया सभी जरूरी जानकारी भरें।",
-"error"
-);
-
-return;
-
-}
-
-
-/*
- * 8 MB maximum for this Base64 version.
- */
-
-if(
-file &&
-file.size >
-8 * 1024 * 1024
-){
-
-showOrderStatus(
-"अभी 8 MB से छोटी file चुनें।",
-"error"
-);
-
-return;
-
-}
-
-
-button.disabled=true;
-
-button.textContent=
-"⏳ Order भेजा जा रहा है...";
-
-
-showOrderStatus(
-"कृपया कुछ सेकंड प्रतीक्षा करें...",
-"success"
-);
-
-
-try{
-
-
-let photoBase64="";
-
-let fileName="";
-
-let mimeType="";
-
-
-if(file){
-
-photoBase64=
-await fileToBase64(file);
-
-fileName=
-file.name;
-
-mimeType=
-file.type ||
-"application/octet-stream";
-
-}
-
-
-const payload={
-
-customerName:name,
-
-mobile:mobile,
-
-email:email,
-
-service:service,
-
-subService:sub,
-
-details:details,
-
-photoBase64:photoBase64,
-
-fileName:fileName,
-
-mimeType:mimeType
-
-};
-
-
-/*
- * Send request to Google Apps Script.
- */
-
-const response=
-await fetch(
-BACKEND_URL,
-{
-
-method:"POST",
-
-body:JSON.stringify(payload)
-
-}
-);
-
-
-const result=
-await response.json();
-
-
-if(!result.success){
-
-throw new Error(
-result.message ||
-"Order submit नहीं हुआ।"
-);
-
-}
-
-
-/*
- * SUCCESS
- */
-
-showOrderStatus(
-"✅ Order सफलतापूर्वक submit हो गया। Order ID: "+
-result.orderId,
-"success"
-);
-
-
-alert(
-"Order सफलतापूर्वक submit हो गया।\n\nOrder ID: "+
-result.orderId
-);
-
-
-/*
- * Reset form.
- */
-
-document
-.getElementById("orderForm")
-.reset();
-
-
-subService.innerHTML=
-'<option value="">-- पहले Service चुनें --</option>';
-
-
-fileInfo.textContent=
-"अभी कोई file select नहीं की गई।";
-
-
-}
-catch(error){
-
-console.error(error);
-
-
-showOrderStatus(
-"❌ Order submit नहीं हुआ: "+
-error.message,
-"error"
-);
-
-}
-finally{
-
-button.disabled=false;
-
-button.textContent=
-"📤 Order Submit करें";
-
-}
-
-}
-);
-
-
-/* =====================================================
-   GITHUB GALLERY
-===================================================== */
-
-const GITHUB_USERNAME=
-"awadheshbabita";
-
-const GITHUB_REPOSITORY=
-"gayatristudio";
-
-const GITHUB_BRANCH=
-"main";
-
-
-const GITHUB_API=
-`https://api.github.com/repos/${GITHUB_USERNAME}/${GITHUB_REPOSITORY}/contents?ref=${GITHUB_BRANCH}`;
-
-
-const gallery=
-document.getElementById(
-"githubGallery"
-);
-
-
-const photoModal=
-document.getElementById(
-"photoModal"
-);
-
-
-const modalImage=
-document.getElementById(
-"modalImage"
-);
-
-
-const modalCaption=
-document.getElementById(
-"modalCaption"
-);
-
-
-const closeModal=
-document.getElementById(
-"closeModal"
-);
-
-
-const prevPhoto=
-document.getElementById(
-"prevPhoto"
-);
-
-
-const nextPhoto=
-document.getElementById(
-"nextPhoto"
-);
-
-
-let photos=[];
-
-let currentPhotoIndex=0;
-
-
-/* =====================================================
-   IMAGE CHECK
-===================================================== */
-
-function isImageFile(name){
-
-const lower=
-name.toLowerCase();
-
-return(
-lower.endsWith(".jpg") ||
-lower.endsWith(".jpeg") ||
-lower.endsWith(".png") ||
-lower.endsWith(".webp") ||
-lower.endsWith(".gif")
-);
-
-}
-
-
-/* =====================================================
-   PHOTO NAME
-===================================================== */
-
-function cleanPhotoName(name){
-
-return name
-.replace(/\.[^/.]+$/,"")
-.replace(/[_-]+/g," ")
-.replace(/\b\w/g,
-function(letter){
-
-return letter.toUpperCase();
 
 });
 
 }
 
 
-/* =====================================================
-   LOAD GALLERY
-===================================================== */
+/* ================================
+   SEND SELECTED SERVICE TO WHATSAPP
+================================ */
 
-async function loadGallery(){
+function sendSelectedToWhatsApp(){
 
-try{
-
-gallery.innerHTML=
-`<div class="gallery-loading">
-📸 Photos load हो रही हैं...
-</div>`;
-
-
-const response=
-await fetch(
-GITHUB_API
-);
-
-
-if(!response.ok){
-
-throw new Error(
-"GitHub files load नहीं हो सकीं."
-);
-
+if(!currentService){
+return;
 }
 
+const service =
+services[currentService];
 
-const files=
-await response.json();
-
-
-photos=
-files
-.filter(
-file=>
-file.type==="file" &&
-isImageFile(file.name)
+const checked =
+Array.from(
+document.querySelectorAll(
+"#optionList input[type='checkbox']:checked"
 )
-.map(
-file=>({
+).map(function(input){
 
-name:file.name,
+return input.value;
 
-url:file.download_url
+});
 
-})
+
+if(checked.length === 0){
+
+alert(
+"कृपया पहले कम से कम एक काम चुनें।"
 );
-
-
-if(photos.length===0){
-
-gallery.innerHTML=
-`<div class="gallery-error">
-
-📷 अभी Gallery में कोई photo नहीं मिली।
-
-</div>`;
 
 return;
 
 }
 
 
-gallery.innerHTML="";
+let message =
+"नमस्ते Gayatri Studio,%0A%0A";
+
+message +=
+"मुझे निम्न Service करवानी है:%0A%0A";
+
+message +=
+"Service: " +
+encodeURIComponent(service.title) +
+"%0A%0A";
 
 
-photos.forEach(
-function(photo,index){
+checked.forEach(
+function(item,index){
 
-const card=
+message +=
+"✓ " +
+(index+1) +
+". " +
+encodeURIComponent(item) +
+"%0A";
+
+});
+
+
+message +=
+"%0Aस्थान: " +
+encodeURIComponent(STUDIO_ADDRESS);
+
+message +=
+"%0Aसमय: " +
+encodeURIComponent(STUDIO_TIME);
+
+message +=
+"%0A%0Aमैं अपनी फोटो/Document WhatsApp पर भेज रहा/रही हूँ।";
+
+
+const url =
+"https://wa.me/" +
+WHATSAPP_NUMBER +
+"?text=" +
+message;
+
+
+window.open(
+url,
+"_blank"
+);
+
+
+/* Backend order */
+
+sendOrderToBackend(
+service.title,
+checked
+);
+
+}
+
+
+/* ================================
+   SEND ORDER TO GOOGLE APPS SCRIPT
+================================ */
+
+function sendOrderToBackend(
+service,
+selectedItems
+){
+
+try{
+
+fetch(
+BACKEND_URL,
+{
+
+method:"POST",
+
+headers:{
+"Content-Type":
+"application/json"
+},
+
+body:JSON.stringify({
+
+name:"",
+mobile:"",
+email:STUDIO_EMAIL,
+
+service:service,
+
+subService:
+selectedItems.join(", "),
+
+details:
+"Website Service Order",
+
+address:
+STUDIO_ADDRESS,
+
+source:
+"Gayatri Studio Website"
+
+})
+
+}
+).catch(function(){
+
+/*
+Backend failure से
+WhatsApp order नहीं रुकेगा।
+*/
+
+});
+
+}catch(error){
+
+console.log(error);
+
+}
+
+}
+
+
+/* ================================
+   GALLERY
+================================ */
+
+/*
+GitHub repository में uploaded
+image files की direct URLs यहाँ
+automatic तरीके से बनाई जाती हैं।
+*/
+
+const GITHUB_USER =
+"awadheshbabita";
+
+const GITHUB_REPO =
+"gayatristudio";
+
+const GITHUB_BRANCH =
+"main";
+
+
+async function loadGallery(){
+
+const gallery =
+document.getElementById(
+"githubGallery"
+);
+
+try{
+
+const apiURL =
+"https://api.github.com/repos/" +
+GITHUB_USER +
+"/" +
+GITHUB_REPO +
+"/contents/";
+
+const response =
+await fetch(apiURL);
+
+if(!response.ok){
+
+throw new Error(
+"Gallery loading failed"
+);
+
+}
+
+const files =
+await response.json();
+
+
+const imageFiles =
+files.filter(function(file){
+
+return file.type === "file" &&
+(
+file.name.toLowerCase().endsWith(".jpg") ||
+file.name.toLowerCase().endsWith(".jpeg") ||
+file.name.toLowerCase().endsWith(".png") ||
+file.name.toLowerCase().endsWith(".webp")
+);
+
+});
+
+
+gallery.innerHTML = "";
+
+
+if(imageFiles.length === 0){
+
+gallery.innerHTML = `
+
+<div class="gallery-loading">
+
+📸 अभी Gallery में photos उपलब्ध नहीं हैं।
+
+</div>
+
+`;
+
+return;
+
+}
+
+
+imageFiles.forEach(
+function(file){
+
+const card =
 document.createElement("div");
 
-card.className=
+card.className =
 "gallery-card";
 
 
-const img=
+const img =
 document.createElement("img");
 
-img.src=
-photo.url;
+img.src =
+file.download_url;
 
-img.alt=
-cleanPhotoName(
-photo.name
+img.alt =
+"Gayatri Studio";
+
+
+img.loading =
+"lazy";
+
+
+img.onclick =
+function(){
+
+openPhoto(
+file.download_url
 );
 
-img.loading="lazy";
+};
 
 
-const caption=
+const caption =
 document.createElement("div");
 
-caption.className=
+caption.className =
 "gallery-caption";
 
-caption.textContent=
-cleanPhotoName(
-photo.name
-);
+caption.innerText =
+formatFileName(file.name);
 
 
 card.appendChild(img);
 
 card.appendChild(caption);
 
-
-card.addEventListener(
-"click",
-function(){
-
-openPhoto(index);
-
-}
-);
-
-
 gallery.appendChild(card);
 
-}
-);
+});
 
+}catch(error){
 
-}
-catch(error){
+console.log(error);
 
-console.error(error);
+gallery.innerHTML = `
 
+<div class="gallery-loading">
 
-gallery.innerHTML=
-`<div class="gallery-error">
-
-❌ Gallery load नहीं हो सकी।
+📸 Gallery अभी load नहीं हो पाई।
 
 <br><br>
 
-कृपया थोड़ी देर बाद फिर से देखें।
+कृपया थोड़ी देर बाद दोबारा खोलें।
 
-</div>`;
+</div>
+
+`;
+
+}
+
+}
+
+
+/* ================================
+   PHOTO NAME
+================================ */
+
+function formatFileName(name){
+
+return name
+.replace(/\.[^/.]+$/,"")
+.replace(/[_-]+/g," ")
+.replace(/\b\w/g,
+function(letter){
+return letter.toUpperCase();
+});
+
+}
+
+
+/* ================================
+   LARGE PHOTO PREVIEW
+================================ */
+
+function openPhoto(url){
+
+document
+.getElementById("largePhoto")
+.src = url;
+
+document
+.getElementById("photoModal")
+.classList.add("show");
+
+document.body.style.overflow="hidden";
+
+}
+
+
+function closePhoto(event){
+
+if(
+!event ||
+event.target.id === "photoModal"
+){
+
+document
+.getElementById("photoModal")
+.classList.remove("show");
+
+document
+.getElementById("largePhoto")
+.src = "";
+
+document.body.style.overflow="";
 
 }
 
 }
 
 
-/* =====================================================
-   PHOTO PREVIEW
-===================================================== */
+/* ================================
+   ESCAPE HTML
+================================ */
 
-function openPhoto(index){
+function escapeHTML(text){
 
-if(!photos.length){
-
-return;
-
-}
-
-
-currentPhotoIndex=
-index;
-
-
-const photo=
-photos[
-currentPhotoIndex
-];
-
-
-modalImage.src=
-photo.url;
-
-
-modalImage.alt=
-cleanPhotoName(
-photo.name
-);
-
-
-modalCaption.textContent=
-cleanPhotoName(
-photo.name
-);
-
-
-photoModal.classList.add(
-"show"
-);
-
-
-document.body.style.overflow=
-"hidden";
+return String(text)
+.replace(/&/g,"&amp;")
+.replace(/</g,"&lt;")
+.replace(/>/g,"&gt;")
+.replace(/"/g,"&quot;")
+.replace(/'/g,"&#039;");
 
 }
 
 
-function closePhoto(){
+/* ================================
+   MODAL OUTSIDE CLICK
+================================ */
 
-photoModal.classList.remove(
-"show"
-);
-
-
-modalImage.src="";
-
-
-document.body.style.overflow=
-"";
-
-}
-
-
-function showNextPhoto(){
-
-if(!photos.length){
-
-return;
-
-}
-
-
-currentPhotoIndex=
-(
-currentPhotoIndex+1
-)
-%
-photos.length;
-
-
-openPhoto(
-currentPhotoIndex
-);
-
-}
-
-
-function showPreviousPhoto(){
-
-if(!photos.length){
-
-return;
-
-}
-
-
-currentPhotoIndex=
-(
-currentPhotoIndex-1+
-photos.length
-)
-%
-photos.length;
-
-
-openPhoto(
-currentPhotoIndex
-);
-
-}
-
-
-closeModal.addEventListener(
-"click",
-closePhoto
-);
-
-
-nextPhoto.addEventListener(
-"click",
-showNextPhoto
-);
-
-
-prevPhoto.addEventListener(
-"click",
-showPreviousPhoto
-);
-
-
-photoModal.addEventListener(
+document
+.getElementById("serviceModal")
+.addEventListener(
 "click",
 function(event){
 
 if(
-event.target===
-photoModal
+event.target === this
 ){
-
-closePhoto();
-
-}
-
-}
-);
-
-
-/* =====================================================
-   KEYBOARD
-===================================================== */
-
-document.addEventListener(
-"keydown",
-function(event){
-
-if(event.key==="Escape"){
-
-closePhoto();
 
 closeService();
 
 }
 
-
-if(
-photoModal.classList.contains("show") &&
-event.key==="ArrowRight"
-){
-
-showNextPhoto();
-
-}
+});
 
 
-if(
-photoModal.classList.contains("show") &&
-event.key==="ArrowLeft"
-){
+/* ================================
+   LOAD GALLERY
+================================ */
 
-showPreviousPhoto();
-
-}
-
-}
-);
-
-
-/* =====================================================
-   START
-===================================================== */
+document.addEventListener(
+"DOMContentLoaded",
+function(){
 
 loadGallery();
 
+});
+
+
 </script>
+
 
 </body>
 </html>
