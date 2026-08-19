@@ -1,24 +1,22 @@
 <!DOCTYPE html>
 <html lang="hi">
-
 <head>
 
 <meta charset="UTF-8">
 
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <meta name="description"
-content="Gayatri Studio - Photography, Photo Restoration, CSC, Railway Ticket Booking and Online Services">
+content="Gayatri Studio - Photography, Photo Restoration, Document Services, CSC and Railway Ticket Booking">
 
 <title>Gayatri Studio | Photography & Online Services</title>
 
 
 <style>
 
-/* =========================
-   BASIC
-========================= */
+/* =========================================================
+   RESET
+========================================================= */
 
 *{
     box-sizing:border-box;
@@ -44,9 +42,9 @@ textarea{
 }
 
 
-/* =========================
+/* =========================================================
    HEADER
-========================= */
+========================================================= */
 
 header{
     background:linear-gradient(135deg,#14253b,#263f5d);
@@ -68,9 +66,9 @@ header{
 }
 
 
-/* =========================
-   NAV
-========================= */
+/* =========================================================
+   NAVIGATION
+========================================================= */
 
 nav{
     background:white;
@@ -79,7 +77,7 @@ nav{
     box-shadow:0 2px 10px #0001;
     position:sticky;
     top:0;
-    z-index:100;
+    z-index:50;
 }
 
 nav a{
@@ -87,12 +85,13 @@ nav a{
     color:#18202a;
     font-weight:bold;
     margin:0 9px;
+    display:inline-block;
 }
 
 
-/* =========================
+/* =========================================================
    HERO
-========================= */
+========================================================= */
 
 .hero{
     text-align:center;
@@ -126,10 +125,14 @@ nav a{
     cursor:pointer;
 }
 
+.btn:hover{
+    opacity:.9;
+}
 
-/* =========================
+
+/* =========================================================
    SECTIONS
-========================= */
+========================================================= */
 
 section{
     padding:55px 20px;
@@ -144,14 +147,13 @@ section{
 }
 
 
-/* =========================
+/* =========================================================
    SERVICES
-========================= */
+========================================================= */
 
 .services{
     display:grid;
-    grid-template-columns:
-    repeat(auto-fit,minmax(220px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
     gap:20px;
 }
 
@@ -161,6 +163,11 @@ section{
     border-radius:18px;
     box-shadow:0 5px 20px #00000012;
     text-align:center;
+    transition:.2s;
+}
+
+.card:hover{
+    transform:translateY(-3px);
 }
 
 .icon{
@@ -195,14 +202,13 @@ section{
 }
 
 
-/* =========================
+/* =========================================================
    GALLERY
-========================= */
+========================================================= */
 
 .gallery{
     display:grid;
-    grid-template-columns:
-    repeat(auto-fit,minmax(230px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
     gap:18px;
 }
 
@@ -232,20 +238,16 @@ section{
     display:flex;
     align-items:center;
     justify-content:center;
-    background:linear-gradient(
-        135deg,
-        #334e68,
-        #829ab1
-    );
+    background:linear-gradient(135deg,#334e68,#829ab1);
     color:white;
     font-size:20px;
     text-align:center;
 }
 
 
-/* =========================
-   ORDER
-========================= */
+/* =========================================================
+   ORDER SECTION
+========================================================= */
 
 .order{
     background:white;
@@ -261,9 +263,9 @@ section{
 }
 
 
-/* =========================
+/* =========================================================
    CONTACT
-========================= */
+========================================================= */
 
 .contact{
     text-align:center;
@@ -277,9 +279,9 @@ section{
 }
 
 
-/* =========================
+/* =========================================================
    FOOTER
-========================= */
+========================================================= */
 
 footer{
     background:#0d1928;
@@ -289,18 +291,18 @@ footer{
 }
 
 
-/* =========================
+/* =========================================================
    MODAL
-========================= */
+========================================================= */
 
 .modal{
     display:none;
     position:fixed;
     inset:0;
-    background:rgba(0,0,0,.72);
+    background:rgba(0,0,0,.75);
     z-index:1000;
     overflow-y:auto;
-    padding:12px;
+    padding:10px;
 }
 
 .modal.show{
@@ -348,9 +350,9 @@ footer{
 }
 
 
-/* =========================
-   CHECKBOX
-========================= */
+/* =========================================================
+   CHECKBOX OPTIONS
+========================================================= */
 
 .select-all{
     display:flex;
@@ -396,12 +398,13 @@ footer{
     width:21px;
     height:21px;
     accent-color:#119b8b;
+    cursor:pointer;
 }
 
 
-/* =========================
+/* =========================================================
    FORM
-========================= */
+========================================================= */
 
 .form-group{
     margin-bottom:17px;
@@ -421,6 +424,7 @@ footer{
     border-radius:10px;
     font-size:16px;
     outline:none;
+    background:white;
 }
 
 .form-group input:focus,
@@ -444,9 +448,41 @@ footer{
 }
 
 
-/* =========================
+/* =========================================================
+   FILE BOX
+========================================================= */
+
+.file-box{
+    background:#f6f8fb;
+    border:1px dashed #b9c2cc;
+    padding:14px;
+    border-radius:12px;
+}
+
+.file-name{
+    margin-top:8px;
+    color:#119b8b;
+    font-size:14px;
+    word-break:break-word;
+}
+
+
+/* =========================================================
+   SELECTED SERVICE
+========================================================= */
+
+.selected-preview{
+    background:#f2f6fa;
+    padding:15px;
+    border-radius:13px;
+    margin:18px 0;
+    font-size:15px;
+}
+
+
+/* =========================================================
    BUTTONS
-========================= */
+========================================================= */
 
 .form-buttons{
     display:flex;
@@ -484,22 +520,9 @@ footer{
 }
 
 
-/* =========================
-   SELECTED SERVICE
-========================= */
-
-.selected-preview{
-    background:#f2f6fa;
-    padding:15px;
-    border-radius:13px;
-    margin:18px 0;
-    font-size:15px;
-}
-
-
-/* =========================
+/* =========================================================
    LOADING
-========================= */
+========================================================= */
 
 .loading{
     display:none;
@@ -510,9 +533,9 @@ footer{
 }
 
 
-/* =========================
+/* =========================================================
    SUCCESS
-========================= */
+========================================================= */
 
 .success-box{
     display:none;
@@ -531,18 +554,19 @@ footer{
     border-radius:10px;
     color:#087c6e;
     font-weight:bold;
+    word-break:break-word;
 }
 
 
-/* =========================
-   PHOTO MODAL
-========================= */
+/* =========================================================
+   LARGE PHOTO
+========================================================= */
 
 .photo-modal{
     display:none;
     position:fixed;
     inset:0;
-    background:rgba(0,0,0,.9);
+    background:rgba(0,0,0,.92);
     z-index:2000;
     align-items:center;
     justify-content:center;
@@ -570,12 +594,13 @@ footer{
     width:45px;
     height:45px;
     border-radius:50%;
+    cursor:pointer;
 }
 
 
-/* =========================
+/* =========================================================
    MOBILE
-========================= */
+========================================================= */
 
 @media(max-width:600px){
 
@@ -634,9 +659,9 @@ footer{
 <body>
 
 
-<!-- =========================
+<!-- =====================================================
      HEADER
-========================= -->
+===================================================== -->
 
 <header>
 
@@ -651,9 +676,9 @@ Photography • Photo Restoration • CSC • Railway • Online Services
 </header>
 
 
-<!-- =========================
+<!-- =====================================================
      NAVIGATION
-========================= -->
+===================================================== -->
 
 <nav>
 
@@ -676,9 +701,9 @@ Contact
 </nav>
 
 
-<!-- =========================
+<!-- =====================================================
      HERO
-========================= -->
+===================================================== -->
 
 <section class="hero">
 
@@ -704,9 +729,9 @@ href="https://wa.me/919451118011?text=नमस्ते%20Gayatri%20Studio,%20�
 </section>
 
 
-<!-- =========================
+<!-- =====================================================
      SERVICES
-========================= -->
+===================================================== -->
 
 <section id="services">
 
@@ -717,6 +742,8 @@ href="https://wa.me/919451118011?text=नमस्ते%20Gayatri%20Studio,%20�
 
 <div class="services">
 
+
+<!-- 1 -->
 
 <div class="card">
 
@@ -744,6 +771,8 @@ onclick="openService('Passport Photo')">
 </div>
 
 
+<!-- 2 -->
+
 <div class="card">
 
 <div class="icon">
@@ -769,6 +798,8 @@ onclick="openService('Photo Restoration')">
 
 </div>
 
+
+<!-- 3 -->
 
 <div class="card">
 
@@ -796,6 +827,8 @@ onclick="openService('Document Restoration')">
 </div>
 
 
+<!-- 4 -->
+
 <div class="card">
 
 <div class="icon">
@@ -821,6 +854,8 @@ onclick="openService('Photo Enhancement')">
 
 </div>
 
+
+<!-- 5 -->
 
 <div class="card">
 
@@ -848,6 +883,8 @@ onclick="openService('Graphic Designing')">
 </div>
 
 
+<!-- 6 -->
+
 <div class="card">
 
 <div class="icon">
@@ -874,6 +911,8 @@ onclick="openService('Photo Printing')">
 </div>
 
 
+<!-- 7 -->
+
 <div class="card">
 
 <div class="icon">
@@ -899,6 +938,8 @@ onclick="openService('CSC / जनसेवा केंद्र')">
 
 </div>
 
+
+<!-- 8 -->
 
 <div class="card">
 
@@ -931,9 +972,9 @@ onclick="openService('Railway Ticket Booking')">
 </section>
 
 
-<!-- =========================
+<!-- =====================================================
      GALLERY
-========================= -->
+===================================================== -->
 
 <section id="gallery">
 
@@ -945,7 +986,8 @@ onclick="openService('Railway Ticket Booking')">
 <div class="gallery">
 
 
-<div class="gallery-card"
+<div
+class="gallery-card"
 onclick="openPhoto('IMG_20260519_000129.png')">
 
 <img
@@ -1004,7 +1046,12 @@ Photo Enhancement
 </div>
 
 
-<p style="text-align:center;margin-top:20px;color:#68717d">
+<p
+style="
+text-align:center;
+margin-top:20px;
+color:#68717d;
+">
 
 फोटो को बड़ा देखने के लिए फोटो पर क्लिक करें।
 
@@ -1013,9 +1060,9 @@ Photo Enhancement
 </section>
 
 
-<!-- =========================
+<!-- =====================================================
      ORDER
-========================= -->
+===================================================== -->
 
 <section id="order">
 
@@ -1046,9 +1093,9 @@ onclick="openService('Passport Photo')">
 </section>
 
 
-<!-- =========================
+<!-- =====================================================
      CONTACT
-========================= -->
+===================================================== -->
 
 <section
 id="contact"
@@ -1106,9 +1153,9 @@ WhatsApp करें
 </section>
 
 
-<!-- =========================
+<!-- =====================================================
      FOOTER
-========================= -->
+===================================================== -->
 
 <footer>
 
@@ -1233,7 +1280,7 @@ Customer Details
 
 
 <p class="modal-subtitle">
-अपनी जानकारी भरकर Order Submit करें
+अपनी जानकारी और फाइल देकर Order Submit करें
 </p>
 
 
@@ -1247,7 +1294,8 @@ Customer Name
 <input
 type="text"
 id="customerName"
-placeholder="अपना नाम लिखें">
+placeholder="अपना नाम लिखें"
+autocomplete="name">
 
 </div>
 
@@ -1264,7 +1312,8 @@ type="tel"
 id="customerMobile"
 placeholder="10 अंकों का मोबाइल नंबर"
 maxlength="10"
-inputmode="numeric">
+inputmode="numeric"
+autocomplete="tel">
 
 </div>
 
@@ -1278,7 +1327,8 @@ Email
 <input
 type="email"
 id="customerEmail"
-placeholder="Email (optional)">
+placeholder="Email (optional)"
+autocomplete="email">
 
 </div>
 
@@ -1297,23 +1347,67 @@ placeholder="अपने काम की अतिरिक्त जानक
 </div>
 
 
+<!-- MAIN FILE -->
+
 <div class="form-group">
 
 <label>
-Photo / File
+मुख्य Photo / File
 </label>
+
+<div class="file-box">
 
 <input
 type="file"
 id="photoFile"
 accept="image/*,.pdf,.doc,.docx">
 
+<div
+class="file-name"
+id="photoFileName">
+कोई file नहीं चुनी गई
+</div>
+
+</div>
+
 <div class="file-note">
-अभी पहले बिना file के Order test करें।
+अधिकतम 5 MB की file चुनें।
 </div>
 
 </div>
 
+
+<!-- ADDITIONAL FILE -->
+
+<div class="form-group">
+
+<label>
+Additional File
+</label>
+
+<div class="file-box">
+
+<input
+type="file"
+id="additionalFile"
+accept="image/*,.pdf,.doc,.docx">
+
+<div
+class="file-name"
+id="additionalFileName">
+कोई additional file नहीं चुनी गई
+</div>
+
+</div>
+
+<div class="file-note">
+जरूरत हो तो दूसरी file भी जोड़ सकते हैं।
+</div>
+
+</div>
+
+
+<!-- SELECTED SERVICE -->
 
 <div
 class="selected-preview"
@@ -1321,17 +1415,20 @@ id="selectedServicePreview">
 </div>
 
 
+<!-- LOADING -->
+
 <div
 class="loading"
 id="loadingBox">
 
-⏳ आपका Order भेजा जा रहा है...
+⏳ आपका Order और File भेजी जा रही है...
 
 </div>
 
 
-<div class="form-buttons">
+<!-- BUTTONS -->
 
+<div class="form-buttons">
 
 <button
 type="button"
@@ -1353,13 +1450,14 @@ onclick="submitOrder()">
 
 </button>
 
-
 </div>
 
 </div>
 
 
-<!-- SUCCESS -->
+<!-- =====================================================
+     SUCCESS
+===================================================== -->
 
 <div
 class="success-box"
@@ -1390,7 +1488,7 @@ Order ID
 
 
 <p>
-हम आपके काम की जानकारी देखकर आपसे संपर्क करेंगे।
+आपकी file भी order के साथ भेज दी गई है।
 </p>
 
 
@@ -1453,16 +1551,12 @@ alt="Large Photo">
 </div>
 
 
-<!-- =====================================================
-     JAVASCRIPT
-===================================================== -->
 
 <script>
 
-
-/* =====================================================
-   YOUR APPS SCRIPT WEB APP URL
-===================================================== */
+/* =========================================================
+   APPS SCRIPT WEB APP
+========================================================= */
 
 const API_URL =
 "https://script.google.com/macros/s/AKfycbxuJN-TU8jkuz4VOPAW2QL-sXKOHrO3drai2zMUyRDc83oWchq8Jm4hCpvyWYLRJkrdoQ/exec";
@@ -1476,9 +1570,9 @@ const STUDIO_MOBILE =
 "9451118011";
 
 
-/* =====================================================
-   SERVICES
-===================================================== */
+/* =========================================================
+   SERVICE OPTIONS
+========================================================= */
 
 const serviceOptions = {
 
@@ -1572,33 +1666,47 @@ const serviceOptions = {
 };
 
 
+/* =========================================================
+   CURRENT SERVICE
+========================================================= */
+
 let currentService = "";
 
 let selectedOptions = [];
 
 
-/* =====================================================
+/* =========================================================
    OPEN SERVICE
-===================================================== */
+========================================================= */
 
 function openService(service){
 
-currentService = service;
+currentService =
+service;
 
-selectedOptions = [];
+selectedOptions =
+[];
 
 
 const modal =
-document.getElementById("serviceModal");
+document.getElementById(
+"serviceModal"
+);
 
 const title =
-document.getElementById("serviceTitle");
+document.getElementById(
+"serviceTitle"
+);
 
 const list =
-document.getElementById("optionList");
+document.getElementById(
+"optionList"
+);
 
 const selectAll =
-document.getElementById("selectAll");
+document.getElementById(
+"selectAll"
+);
 
 
 title.textContent =
@@ -1617,17 +1725,22 @@ const options =
 serviceOptions[service] || [];
 
 
-options.forEach(function(option,index){
+options.forEach(
+function(option,index){
 
 const label =
-document.createElement("label");
+document.createElement(
+"label"
+);
 
 label.className =
 "option";
 
 
 const checkbox =
-document.createElement("input");
+document.createElement(
+"input"
+);
 
 checkbox.type =
 "checkbox";
@@ -1636,7 +1749,8 @@ checkbox.value =
 option;
 
 checkbox.id =
-"serviceOption_" + index;
+"serviceOption_" +
+index;
 
 
 checkbox.addEventListener(
@@ -1646,7 +1760,9 @@ updateSelectAll
 
 
 const text =
-document.createElement("span");
+document.createElement(
+"span"
+);
 
 text.textContent =
 option;
@@ -1659,6 +1775,7 @@ checkbox
 label.appendChild(
 text
 );
+
 
 list.appendChild(
 label
@@ -1674,27 +1791,33 @@ modal.classList.add(
 }
 
 
-/* =====================================================
+/* =========================================================
    CLOSE SERVICE
-===================================================== */
+========================================================= */
 
 function closeService(){
 
 document
-.getElementById("serviceModal")
-.classList.remove("show");
+.getElementById(
+"serviceModal"
+)
+.classList.remove(
+"show"
+);
 
 }
 
 
-/* =====================================================
+/* =========================================================
    SELECT ALL
-===================================================== */
+========================================================= */
 
 function toggleSelectAll(){
 
 const master =
-document.getElementById("selectAll");
+document.getElementById(
+"selectAll"
+);
 
 const boxes =
 document.querySelectorAll(
@@ -1702,7 +1825,8 @@ document.querySelectorAll(
 );
 
 
-boxes.forEach(function(box){
+boxes.forEach(
+function(box){
 
 box.checked =
 master.checked;
@@ -1712,9 +1836,9 @@ master.checked;
 }
 
 
-/* =====================================================
+/* =========================================================
    UPDATE SELECT ALL
-===================================================== */
+========================================================= */
 
 function updateSelectAll(){
 
@@ -1729,7 +1853,9 @@ document.querySelectorAll(
 );
 
 const master =
-document.getElementById("selectAll");
+document.getElementById(
+"selectAll"
+);
 
 
 master.checked =
@@ -1739,9 +1865,9 @@ checked.length === boxes.length;
 }
 
 
-/* =====================================================
+/* =========================================================
    GO TO CUSTOMER FORM
-===================================================== */
+========================================================= */
 
 function goToCustomerForm(){
 
@@ -1752,14 +1878,19 @@ document.querySelectorAll(
 
 
 selectedOptions =
-Array.from(checked).map(function(box){
-
+Array.from(
+checked
+)
+.map(
+function(box){
 return box.value;
+}
+);
 
-});
 
-
-if(selectedOptions.length === 0){
+if(
+selectedOptions.length === 0
+){
 
 alert(
 "कृपया कम से कम एक काम चुनें।"
@@ -1775,42 +1906,43 @@ document.getElementById(
 ).innerHTML =
 
 "<strong>Service:</strong> "
-+ currentService
-+ "<br><br>"
-+ "<strong>चुना गया काम:</strong><br>"
-+ selectedOptions.map(function(item){
++
+escapeHtml(
+currentService
+)
++
+"<br><br>"
++
+"<strong>चुना गया काम:</strong><br>"
++
+selectedOptions
+.map(
+function(item){
 
-return "✓ " + item;
+return "✓ " +
+escapeHtml(item);
 
-}).join("<br>");
+}
+)
+.join("<br>");
 
 
 closeService();
 
 
-document
-.getElementById("customerModal")
-.classList.add("show");
+document.getElementById(
+"customerModal"
+)
+.classList.add(
+"show"
+);
 
 }
 
 
-/* =====================================================
-   CLOSE CUSTOMER
-===================================================== */
-
-function closeCustomer(){
-
-document
-.getElementById("customerModal")
-.classList.remove("show");
-
-}
-
-
-/* =====================================================
-   BACK
-===================================================== */
+/* =========================================================
+   BACK TO SERVICES
+========================================================= */
 
 function backToServices(){
 
@@ -1823,43 +1955,221 @@ currentService
 }
 
 
-/* =====================================================
-   SUBMIT ORDER
-   IMPORTANT:
-   NO JSON
-   NO application/json
-   NO CORS PRE-FLIGHT
-===================================================== */
+/* =========================================================
+   CLOSE CUSTOMER
+========================================================= */
+
+function closeCustomer(){
+
+document.getElementById(
+"customerModal"
+)
+.classList.remove(
+"show"
+);
+
+}
+
+
+/* =========================================================
+   FILE NAME DISPLAY
+========================================================= */
+
+document.getElementById(
+"photoFile"
+)
+.addEventListener(
+"change",
+function(){
+
+const file =
+this.files[0];
+
+document.getElementById(
+"photoFileName"
+)
+.textContent =
+file
+? file.name
+: "कोई file नहीं चुनी गई";
+
+});
+
+
+document.getElementById(
+"additionalFile"
+)
+.addEventListener(
+"change",
+function(){
+
+const file =
+this.files[0];
+
+document.getElementById(
+"additionalFileName"
+)
+.textContent =
+file
+? file.name
+: "कोई additional file नहीं चुनी गई";
+
+});
+
+
+/* =========================================================
+   READ FILE AS BASE64
+========================================================= */
+
+function readFileAsBase64(file){
+
+return new Promise(
+function(resolve,reject){
+
+const reader =
+new FileReader();
+
+
+reader.onload =
+function(){
+
+resolve(
+reader.result
+);
+
+};
+
+
+reader.onerror =
+function(){
+
+reject(
+new Error(
+"File पढ़ी नहीं जा सकी।"
+)
+);
+
+};
+
+
+reader.readAsDataURL(
+file
+);
+
+}
+);
+
+}
+
+
+/* =========================================================
+   CREATE CLIENT ORDER ID
+========================================================= */
+
+function createClientOrderId(){
+
+const now =
+new Date();
+
+
+const year =
+now.getFullYear();
+
+
+const month =
+String(
+now.getMonth()+1
+)
+.padStart(
+2,
+"0"
+);
+
+
+const day =
+String(
+now.getDate()
+)
+.padStart(
+2,
+"0"
+);
+
+
+const random =
+Math.floor(
+1000 +
+Math.random()*9000
+);
+
+
+return "GS-" +
+year +
+month +
+day +
+"-" +
+random;
+
+}
+
+
+/* =========================================================
+   SUBMIT ORDER + FILES
+========================================================= */
 
 async function submitOrder(){
 
 const name =
-document
-.getElementById("customerName")
+document.getElementById(
+"customerName"
+)
 .value
 .trim();
 
 
 const mobile =
-document
-.getElementById("customerMobile")
+document.getElementById(
+"customerMobile"
+)
 .value
 .trim();
 
 
 const email =
-document
-.getElementById("customerEmail")
+document.getElementById(
+"customerEmail"
+)
 .value
 .trim();
 
 
 const details =
-document
-.getElementById("orderDetails")
+document.getElementById(
+"orderDetails"
+)
 .value
 .trim();
 
+
+const photo =
+document.getElementById(
+"photoFile"
+)
+.files[0]
+|| null;
+
+
+const additionalFile =
+document.getElementById(
+"additionalFile"
+)
+.files[0]
+|| null;
+
+
+/* =====================================================
+   VALIDATION
+===================================================== */
 
 if(!name){
 
@@ -1872,7 +2182,11 @@ return;
 }
 
 
-if(!/^[0-9]{10}$/.test(mobile)){
+if(
+!/^[0-9]{10}$/.test(
+mobile
+)
+){
 
 alert(
 "कृपया सही 10 अंकों का Mobile Number डालें।"
@@ -1883,7 +2197,9 @@ return;
 }
 
 
-if(selectedOptions.length === 0){
+if(
+selectedOptions.length === 0
+){
 
 alert(
 "कृपया कम से कम एक काम चुनें।"
@@ -1894,12 +2210,52 @@ return;
 }
 
 
+/* =====================================================
+   FILE SIZE
+===================================================== */
+
+const MAX_FILE_SIZE =
+5 * 1024 * 1024;
+
+
+if(
+photo &&
+photo.size > MAX_FILE_SIZE
+){
+
+alert(
+"मुख्य file 5 MB से छोटी होनी चाहिए।"
+);
+
+return;
+
+}
+
+
+if(
+additionalFile &&
+additionalFile.size > MAX_FILE_SIZE
+){
+
+alert(
+"Additional file 5 MB से छोटी होनी चाहिए।"
+);
+
+return;
+
+}
+
+
+/* =====================================================
+   UI
+===================================================== */
+
 const loading =
 document.getElementById(
 "loadingBox"
 );
 
-const button =
+const submitButton =
 document.getElementById(
 "submitOrderBtn"
 );
@@ -1908,17 +2264,60 @@ document.getElementById(
 loading.style.display =
 "block";
 
-button.disabled =
+submitButton.disabled =
 true;
 
 
 /* =====================================================
-   URL ENCODED DATA
+   CLIENT ORDER ID
+===================================================== */
+
+const clientOrderId =
+createClientOrderId();
+
+
+try{
+
+/* =====================================================
+   READ FILES
+===================================================== */
+
+let photoBase64 =
+"";
+
+let additionalFileBase64 =
+"";
+
+
+if(photo){
+
+photoBase64 =
+await readFileAsBase64(
+photo
+);
+
+}
+
+
+if(additionalFile){
+
+additionalFileBase64 =
+await readFileAsBase64(
+additionalFile
+);
+
+}
+
+
+/* =====================================================
+   BUILD FORM DATA
 ===================================================== */
 
 const params =
 new URLSearchParams();
 
+
+/* Customer */
 
 params.append(
 "customerName",
@@ -1940,6 +2339,9 @@ params.append(
 email
 );
 
+
+/* Service */
+
 params.append(
 "service",
 currentService
@@ -1947,13 +2349,18 @@ currentService
 
 params.append(
 "subService",
-selectedOptions.join(", ")
+selectedOptions.join(
+", "
+)
 );
 
 params.append(
 "details",
 details
 );
+
+
+/* Studio */
 
 params.append(
 "studio",
@@ -1966,16 +2373,80 @@ params.append(
 );
 
 
+/* Client ID */
+
+params.append(
+"clientOrderId",
+clientOrderId
+);
+
+
 /* =====================================================
-   SEND TO APPS SCRIPT
-   no-cors prevents browser CORS error
+   MAIN PHOTO
 ===================================================== */
 
-try{
+if(photoBase64){
+
+params.append(
+"photoBase64",
+photoBase64
+);
+
+params.append(
+"fileName",
+photo.name
+);
+
+params.append(
+"mimeType",
+photo.type ||
+"application/octet-stream"
+);
+
+}
+
+
+/* =====================================================
+   ADDITIONAL FILE
+===================================================== */
+
+if(
+additionalFileBase64
+){
+
+params.append(
+"additionalFileBase64",
+additionalFileBase64
+);
+
+params.append(
+"additionalFileName",
+additionalFile.name
+);
+
+params.append(
+"additionalMimeType",
+additionalFile.type ||
+"application/octet-stream"
+);
+
+}
+
+
+/* =====================================================
+   SEND TO APPS SCRIPT
+===================================================== */
+
+/*
+ * application/x-www-form-urlencoded
+ * इस्तेमाल किया जा रहा है ताकि
+ * browser CORS preflight समस्या न करे।
+ */
 
 await fetch(
 API_URL,
 {
+
 method:"POST",
 
 mode:"no-cors",
@@ -1987,42 +2458,42 @@ headers:{
 
 body:
 params.toString()
+
 }
 );
 
 
-/*
-   no-cors response is opaque.
-   Therefore browser cannot read Apps Script JSON.
-   But the POST request has been sent.
-*/
-
-
-const orderId =
-"GS-" +
-Date.now();
-
+/* =====================================================
+   SUCCESS
+===================================================== */
 
 showSuccess(
-orderId
+clientOrderId
 );
 
+}
 
-}catch(error){
+catch(error){
 
-console.error(error);
+console.error(
+"ORDER ERROR:",
+error
+);
 
 alert(
-"Order भेजने में समस्या हुई।\n\n"
-+ error.message
+"Order/File भेजने में समस्या हुई।\n\n"
++
+error.message
 );
 
-}finally{
+}
+
+finally{
 
 loading.style.display =
 "none";
 
-button.disabled =
+submitButton.disabled =
 false;
 
 }
@@ -2030,44 +2501,58 @@ false;
 }
 
 
-/* =====================================================
+/* =========================================================
    SUCCESS
-===================================================== */
+========================================================= */
 
 function showSuccess(orderId){
 
 document.getElementById(
 "customerFormArea"
-).style.display =
+)
+.style.display =
 "none";
 
 
 document.getElementById(
 "successBox"
-).style.display =
+)
+.style.display =
 "block";
 
 
 document.getElementById(
 "generatedOrderId"
-).textContent =
-"Order ID: " + orderId;
+)
+.textContent =
+"Order ID: " +
+orderId;
 
 
 const message =
 "नमस्ते Gayatri Studio,"
-+ "\nमैंने वेबसाइट से Order किया है।"
-+ "\nService: "
-+ currentService
-+ "\nकाम: "
-+ selectedOptions.join(", ")
-+ "\nOrder ID: "
-+ orderId;
++
+"\nमैंने वेबसाइट से Order किया है।"
++
+"\nOrder ID: "
++
+orderId
++
+"\nService: "
++
+currentService
++
+"\nकाम: "
++
+selectedOptions.join(
+", "
+);
 
 
 document.getElementById(
 "successWhatsApp"
-).href =
+)
+.href =
 "https://wa.me/919451118011?text="
 +
 encodeURIComponent(
@@ -2077,69 +2562,84 @@ message
 }
 
 
-/* =====================================================
-   LARGE PHOTO
-===================================================== */
+/* =========================================================
+   OPEN GALLERY PHOTO
+========================================================= */
 
 function openPhoto(src){
 
-const modal =
-document.getElementById(
-"photoModal"
-);
-
-const image =
 document.getElementById(
 "largePhoto"
-);
-
-image.src =
+)
+.src =
 src;
 
-modal.classList.add(
+
+document.getElementById(
+"photoModal"
+)
+.classList.add(
 "show"
 );
 
 }
 
 
-/* =====================================================
-   CLOSE PHOTO
-===================================================== */
+/* =========================================================
+   CLOSE GALLERY PHOTO
+========================================================= */
 
 function closePhoto(){
 
-document
-.getElementById("photoModal")
-.classList.remove("show");
+document.getElementById(
+"photoModal"
+)
+.classList.remove(
+"show"
+);
 
 }
 
 
-/* =====================================================
-   ESC KEY
-===================================================== */
+/* =========================================================
+   ESCAPE HTML
+========================================================= */
 
-document.addEventListener(
-"keydown",
-function(event){
+function escapeHtml(text){
 
-if(event.key === "Escape"){
+return String(text)
 
-closeService();
+.replace(
+/&/g,
+"&amp;"
+)
 
-closeCustomer();
+.replace(
+/</g,
+"&lt;"
+)
 
-closePhoto();
+.replace(
+/>/g,
+"&gt;"
+)
+
+.replace(
+/"/g,
+"&quot;"
+)
+
+.replace(
+/'/g,
+"&#039;"
+);
 
 }
 
-});
 
-
-/* =====================================================
+/* =========================================================
    OUTSIDE CLICK
-===================================================== */
+========================================================= */
 
 window.addEventListener(
 "click",
@@ -2161,21 +2661,54 @@ document.getElementById(
 );
 
 
-if(event.target === serviceModal){
+if(
+event.target ===
+serviceModal
+){
 
 closeService();
 
 }
 
 
-if(event.target === customerModal){
+if(
+event.target ===
+customerModal
+){
 
 closeCustomer();
 
 }
 
 
-if(event.target === photoModal){
+if(
+event.target ===
+photoModal
+){
+
+closePhoto();
+
+}
+
+});
+
+
+/* =========================================================
+   ESC KEY
+========================================================= */
+
+document.addEventListener(
+"keydown",
+function(event){
+
+if(
+event.key ===
+"Escape"
+){
+
+closeService();
+
+closeCustomer();
 
 closePhoto();
 
