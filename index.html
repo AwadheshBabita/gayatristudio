@@ -1,572 +1,725 @@
 <!DOCTYPE html>
 <html lang="hi">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Gayatri Studio | Photography, CSC & Digital Services</title>
 
 <style>
+
+/* =====================================================
+   BASIC
+===================================================== */
+
 *{
-box-sizing:border-box;
-margin:0;
-padding:0;
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
 }
 
 html{
-scroll-behavior:smooth;
+    scroll-behavior:smooth;
 }
 
 body{
-font-family:Arial,sans-serif;
-background:#f5f7fb;
-color:#18202a;
-line-height:1.6;
+    font-family:Arial,sans-serif;
+    background:#f5f7fb;
+    color:#18202a;
+    line-height:1.6;
 }
 
+button,
+input,
+select,
+textarea{
+    font-family:inherit;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
 header{
-background:linear-gradient(135deg,#14253b,#263f5d);
-color:white;
-text-align:center;
-padding:35px 18px;
+    background:linear-gradient(135deg,#14253b,#263f5d);
+    color:white;
+    text-align:center;
+    padding:35px 18px;
 }
 
 .logo{
-font-size:32px;
-font-weight:800;
-letter-spacing:1px;
+    font-size:32px;
+    font-weight:800;
+    letter-spacing:1px;
 }
 
 .tagline{
-font-size:17px;
-margin-top:8px;
-color:#dbe7f5;
+    font-size:17px;
+    margin-top:8px;
+    color:#dbe7f5;
 }
 
+
+/* =====================================================
+   NAVIGATION
+===================================================== */
+
 nav{
-background:white;
-padding:15px 8px;
-text-align:center;
-box-shadow:0 2px 10px #0001;
-position:sticky;
-top:0;
-z-index:100;
+    background:white;
+    padding:15px 8px;
+    text-align:center;
+    box-shadow:0 2px 10px #0001;
+    position:sticky;
+    top:0;
+    z-index:100;
 }
 
 nav a{
-text-decoration:none;
-color:#18202a;
-font-weight:bold;
-margin:0 10px;
+    text-decoration:none;
+    color:#18202a;
+    font-weight:bold;
+    margin:0 10px;
 }
 
+
+/* =====================================================
+   HERO
+===================================================== */
+
 .hero{
-text-align:center;
-padding:65px 20px;
-background:linear-gradient(#eef5ff,#fff);
+    text-align:center;
+    padding:65px 20px;
+    background:linear-gradient(#eef5ff,#fff);
 }
 
 .hero h1{
-font-size:38px;
-margin-bottom:18px;
+    font-size:38px;
+    margin-bottom:18px;
 }
 
 .hero p{
-font-size:18px;
-color:#5d6673;
-max-width:780px;
-margin:auto;
+    font-size:18px;
+    color:#5d6673;
+    max-width:780px;
+    margin:auto;
 }
 
+
+/* =====================================================
+   BUTTON
+===================================================== */
+
 .btn{
-display:inline-block;
-margin-top:24px;
-padding:14px 25px;
-border-radius:35px;
-background:#119b8b;
-color:white;
-text-decoration:none;
-font-size:17px;
-font-weight:bold;
-border:0;
-cursor:pointer;
-transition:.3s;
+    display:inline-block;
+    margin-top:24px;
+    padding:14px 25px;
+    border-radius:35px;
+    background:#119b8b;
+    color:white;
+    text-decoration:none;
+    font-size:17px;
+    font-weight:bold;
+    border:0;
+    cursor:pointer;
+    transition:.3s;
 }
 
 .btn:hover{
-transform:translateY(-2px);
-opacity:.92;
+    transform:translateY(-2px);
+    opacity:.92;
 }
 
+
+/* =====================================================
+   SECTION
+===================================================== */
+
 section{
-padding:55px 20px;
-max-width:1100px;
-margin:auto;
+    padding:55px 20px;
+    max-width:1100px;
+    margin:auto;
 }
 
 .section-title{
-text-align:center;
-font-size:32px;
-margin-bottom:12px;
+    text-align:center;
+    font-size:32px;
+    margin-bottom:12px;
 }
 
 .section-subtitle{
-text-align:center;
-color:#68717d;
-max-width:760px;
-margin:0 auto 35px;
+    text-align:center;
+    color:#68717d;
+    max-width:760px;
+    margin:0 auto 35px;
 }
 
-/* SERVICES */
+
+/* =====================================================
+   SERVICES
+===================================================== */
 
 .services{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:20px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
 }
 
 .service-card{
-background:white;
-padding:28px 20px;
-border-radius:18px;
-box-shadow:0 5px 20px #00000012;
-text-align:center;
-cursor:pointer;
-border:2px solid transparent;
-transition:.3s;
+    background:white;
+    padding:28px 20px;
+    border-radius:18px;
+    box-shadow:0 5px 20px #00000012;
+    text-align:center;
+    cursor:pointer;
+    border:2px solid transparent;
+    transition:.3s;
 }
 
 .service-card:hover{
-transform:translateY(-5px);
-border-color:#119b8b;
+    transform:translateY(-5px);
+    border-color:#119b8b;
+    box-shadow:0 10px 28px #00000018;
 }
 
 .service-icon{
-font-size:45px;
-margin-bottom:10px;
+    font-size:45px;
+    margin-bottom:10px;
 }
 
 .service-card h3{
-margin-bottom:8px;
+    margin-bottom:8px;
 }
 
 .service-card p{
-color:#68717d;
-font-size:15px;
+    color:#68717d;
+    font-size:15px;
 }
 
 .service-more{
-margin-top:12px;
-color:#119b8b;
-font-weight:bold;
-font-size:14px;
+    margin-top:12px;
+    color:#119b8b;
+    font-weight:bold;
+    font-size:14px;
 }
 
-/* SERVICE MODAL */
+
+/* =====================================================
+   SERVICE MODAL
+===================================================== */
 
 .service-modal{
-display:none;
-position:fixed;
-inset:0;
-z-index:5000;
-background:rgba(0,0,0,.78);
-align-items:center;
-justify-content:center;
-padding:18px;
+    display:none;
+    position:fixed;
+    inset:0;
+    z-index:5000;
+    background:rgba(0,0,0,.78);
+    align-items:center;
+    justify-content:center;
+    padding:18px;
 }
 
 .service-modal.show{
-display:flex;
+    display:flex;
 }
 
 .service-box{
-width:100%;
-max-width:650px;
-max-height:90vh;
-overflow:auto;
-background:white;
-border-radius:22px;
-padding:30px 24px;
-position:relative;
-box-shadow:0 15px 50px #0005;
+    width:100%;
+    max-width:650px;
+    max-height:90vh;
+    overflow:auto;
+    background:white;
+    border-radius:22px;
+    padding:30px 24px;
+    position:relative;
+    box-shadow:0 15px 50px #0005;
 }
 
 .service-close{
-position:absolute;
-top:12px;
-right:14px;
-width:42px;
-height:42px;
-border:0;
-border-radius:50%;
-background:#eef1f5;
-font-size:28px;
-cursor:pointer;
+    position:absolute;
+    top:12px;
+    right:14px;
+    width:42px;
+    height:42px;
+    border:0;
+    border-radius:50%;
+    background:#eef1f5;
+    font-size:28px;
+    cursor:pointer;
 }
 
 .service-icon-large{
-text-align:center;
-font-size:55px;
-margin-bottom:8px;
+    text-align:center;
+    font-size:55px;
+    margin-bottom:8px;
 }
 
 .service-box h2{
-text-align:center;
-margin-bottom:10px;
+    text-align:center;
+    margin-bottom:10px;
 }
 
 .service-box .description{
-text-align:center;
-color:#626b76;
-margin-bottom:18px;
+    text-align:center;
+    color:#626b76;
+    margin-bottom:18px;
 }
 
 .service-list{
-list-style:none;
-margin:15px 0;
+    list-style:none;
+    margin:15px 0;
 }
 
 .service-list li{
-background:#f5f7fb;
-padding:10px 12px;
-margin:7px 0;
-border-radius:10px;
-}
-
-.service-list li strong{
-color:#18202a;
+    background:#f5f7fb;
+    padding:10px 12px;
+    margin:7px 0;
+    border-radius:10px;
 }
 
 .service-order{
-text-align:center;
+    text-align:center;
 }
 
-/* GALLERY */
+
+/* =====================================================
+   ONLINE ORDER
+===================================================== */
+
+.order-section{
+    background:linear-gradient(135deg,#eef8ff,#ffffff);
+    max-width:1100px;
+}
+
+.order-box{
+    background:white;
+    max-width:720px;
+    margin:auto;
+    padding:30px 25px;
+    border-radius:22px;
+    box-shadow:0 7px 25px #00000012;
+}
+
+.order-intro{
+    text-align:center;
+    color:#626b76;
+    margin-bottom:25px;
+}
+
+.form-group{
+    margin-bottom:18px;
+}
+
+.form-group label{
+    display:block;
+    font-weight:bold;
+    margin-bottom:7px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea{
+    width:100%;
+    padding:13px 14px;
+    border:1px solid #d7dde5;
+    border-radius:10px;
+    background:white;
+    color:#18202a;
+    font-size:16px;
+    outline:none;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus{
+    border-color:#119b8b;
+    box-shadow:0 0 0 3px #119b8b18;
+}
+
+.form-group textarea{
+    min-height:120px;
+    resize:vertical;
+}
+
+.file-box{
+    border:2px dashed #b9c5d3;
+    border-radius:14px;
+    padding:22px 15px;
+    text-align:center;
+    background:#fafbfd;
+}
+
+.file-box input{
+    border:0;
+    padding:0;
+    background:transparent;
+}
+
+.file-info{
+    margin-top:10px;
+    color:#68717d;
+    font-size:14px;
+    word-break:break-word;
+}
+
+.file-warning{
+    margin-top:8px;
+    color:#9a6700;
+    font-size:13px;
+}
+
+.order-submit{
+    width:100%;
+    margin-top:5px;
+}
+
+.order-note{
+    margin-top:15px;
+    padding:12px;
+    background:#fff8e6;
+    border-radius:10px;
+    color:#6b5200;
+    font-size:13px;
+}
+
+
+/* =====================================================
+   GALLERY
+===================================================== */
 
 .gallery{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
-gap:20px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:20px;
 }
 
 .gallery-card{
-background:white;
-border-radius:18px;
-overflow:hidden;
-box-shadow:0 5px 20px #00000015;
-cursor:pointer;
-transition:.3s;
+    background:white;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 5px 20px #00000015;
+    cursor:pointer;
+    transition:.3s;
 }
 
 .gallery-card:hover{
-transform:translateY(-5px);
+    transform:translateY(-5px);
+    box-shadow:0 10px 25px #00000020;
 }
 
 .gallery-card img{
-width:100%;
-height:260px;
-display:block;
-object-fit:cover;
-background:#e9eef5;
+    width:100%;
+    height:260px;
+    display:block;
+    object-fit:cover;
+    background:#e9eef5;
 }
 
 .gallery-caption{
-padding:13px 10px;
-text-align:center;
-font-weight:bold;
-color:#354052;
-font-size:14px;
-word-break:break-word;
+    padding:13px 10px;
+    text-align:center;
+    font-weight:bold;
+    color:#354052;
+    font-size:14px;
+    word-break:break-word;
 }
 
 .gallery-loading{
-grid-column:1/-1;
-text-align:center;
-padding:40px 20px;
-color:#68717d;
-font-size:18px;
+    grid-column:1/-1;
+    text-align:center;
+    padding:40px 20px;
+    color:#68717d;
+    font-size:18px;
 }
 
 .gallery-error{
-grid-column:1/-1;
-text-align:center;
-padding:30px;
-background:white;
-border-radius:16px;
-color:#b42318;
+    grid-column:1/-1;
+    text-align:center;
+    padding:30px;
+    background:white;
+    border-radius:16px;
+    color:#b42318;
 }
 
-/* PHOTO PREVIEW */
+
+/* =====================================================
+   PHOTO PREVIEW
+===================================================== */
 
 .photo-modal{
-display:none;
-position:fixed;
-z-index:6000;
-inset:0;
-background:rgba(0,0,0,.94);
-align-items:center;
-justify-content:center;
-padding:20px;
+    display:none;
+    position:fixed;
+    z-index:6000;
+    inset:0;
+    background:rgba(0,0,0,.94);
+    align-items:center;
+    justify-content:center;
+    padding:20px;
 }
 
 .photo-modal.show{
-display:flex;
+    display:flex;
 }
 
 .modal-content{
-max-width:95vw;
-max-height:90vh;
-display:flex;
-flex-direction:column;
-align-items:center;
-justify-content:center;
+    max-width:95vw;
+    max-height:90vh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
 }
 
 .modal-content img{
-max-width:95vw;
-max-height:80vh;
-width:auto;
-height:auto;
-object-fit:contain;
-border-radius:8px;
-box-shadow:0 10px 40px #000;
+    max-width:95vw;
+    max-height:80vh;
+    width:auto;
+    height:auto;
+    object-fit:contain;
+    border-radius:8px;
+    box-shadow:0 10px 40px #000;
 }
 
 .modal-caption{
-color:white;
-font-size:16px;
-font-weight:bold;
-margin-top:12px;
-text-align:center;
+    color:white;
+    font-size:16px;
+    font-weight:bold;
+    margin-top:12px;
+    text-align:center;
 }
 
 .close-modal{
-position:absolute;
-top:12px;
-right:15px;
-width:48px;
-height:48px;
-border:0;
-border-radius:50%;
-background:white;
-color:#111;
-font-size:30px;
-cursor:pointer;
+    position:absolute;
+    top:12px;
+    right:15px;
+    width:48px;
+    height:48px;
+    border:0;
+    border-radius:50%;
+    background:white;
+    color:#111;
+    font-size:30px;
+    cursor:pointer;
 }
 
 .modal-nav{
-position:absolute;
-left:0;
-right:0;
-top:50%;
-display:flex;
-justify-content:space-between;
-padding:0 15px;
-transform:translateY(-50%);
+    position:absolute;
+    left:0;
+    right:0;
+    top:50%;
+    display:flex;
+    justify-content:space-between;
+    padding:0 15px;
+    transform:translateY(-50%);
 }
 
 .modal-nav button{
-width:48px;
-height:48px;
-border:0;
-border-radius:50%;
-background:#ffffffdd;
-font-size:30px;
-cursor:pointer;
+    width:48px;
+    height:48px;
+    border:0;
+    border-radius:50%;
+    background:#ffffffdd;
+    color:#111;
+    font-size:30px;
+    cursor:pointer;
 }
 
-/* ORDER */
 
-.order{
-background:white;
-border-radius:20px;
-padding:35px 25px;
-box-shadow:0 5px 20px #0001;
-text-align:center;
-}
-
-.order p{
-color:#626b76;
-font-size:17px;
-}
-
-/* CONTACT */
+/* =====================================================
+   CONTACT
+===================================================== */
 
 .contact{
-max-width:none;
-background:#14253b;
-color:white;
-text-align:center;
-padding:60px 20px;
+    max-width:none;
+    background:#14253b;
+    color:white;
+    text-align:center;
+    padding:60px 20px;
 }
 
 .contact h2{
-font-size:32px;
-margin-bottom:20px;
+    font-size:32px;
+    margin-bottom:20px;
 }
 
 .contact-info{
-max-width:700px;
-margin:auto;
+    max-width:700px;
+    margin:auto;
 }
 
 .contact-item{
-background:#ffffff12;
-border:1px solid #ffffff18;
-border-radius:14px;
-padding:14px;
-margin:10px auto;
-font-size:16px;
+    background:#ffffff12;
+    border:1px solid #ffffff18;
+    border-radius:14px;
+    padding:14px;
+    margin:10px auto;
+    font-size:16px;
 }
 
 .contact-item a{
-color:white;
-text-decoration:none;
-font-weight:bold;
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
 }
 
 .contact-buttons{
-display:flex;
-justify-content:center;
-flex-wrap:wrap;
-gap:10px;
-margin-top:20px;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-top:20px;
 }
 
 .contact-buttons .btn{
-margin-top:0;
+    margin-top:0;
 }
 
 .call-btn{
-background:#2563eb;
+    background:#2563eb;
 }
 
 .email-btn{
-background:#7c3aed;
+    background:#7c3aed;
 }
 
-/* FOOTER */
+
+/* =====================================================
+   FOOTER
+===================================================== */
 
 footer{
-background:#0d1928;
-color:#ccd6e0;
-text-align:center;
-padding:22px 15px;
+    background:#0d1928;
+    color:#ccd6e0;
+    text-align:center;
+    padding:22px 15px;
 }
 
-/* MOBILE */
+
+/* =====================================================
+   MOBILE
+===================================================== */
 
 @media(max-width:600px){
 
-.logo{
-font-size:27px;
-}
+    .logo{
+        font-size:27px;
+    }
 
-.tagline{
-font-size:14px;
-}
+    .tagline{
+        font-size:14px;
+    }
 
-.hero{
-padding:45px 18px;
-}
+    .hero{
+        padding:45px 18px;
+    }
 
-.hero h1{
-font-size:30px;
-}
+    .hero h1{
+        font-size:30px;
+    }
 
-.hero p{
-font-size:17px;
-}
+    .hero p{
+        font-size:17px;
+    }
 
-nav{
-padding:12px 3px;
-}
+    nav{
+        padding:12px 3px;
+    }
 
-nav a{
-margin:0 4px;
-font-size:13px;
-}
+    nav a{
+        margin:0 4px;
+        font-size:13px;
+    }
 
-section{
-padding:45px 15px;
-}
+    section{
+        padding:45px 15px;
+    }
 
-.section-title{
-font-size:28px;
-}
+    .section-title{
+        font-size:28px;
+    }
 
-.services{
-grid-template-columns:repeat(2,1fr);
-gap:12px;
-}
+    .services{
+        grid-template-columns:repeat(2,1fr);
+        gap:12px;
+    }
 
-.service-card{
-padding:20px 10px;
-}
+    .service-card{
+        padding:20px 10px;
+    }
 
-.service-icon{
-font-size:38px;
-}
+    .service-icon{
+        font-size:38px;
+    }
 
-.service-card h3{
-font-size:16px;
-}
+    .service-card h3{
+        font-size:16px;
+    }
 
-.service-card p{
-font-size:13px;
-}
+    .service-card p{
+        font-size:13px;
+    }
 
-.gallery{
-grid-template-columns:repeat(2,1fr);
-gap:12px;
-}
+    .service-box{
+        padding:28px 17px;
+    }
 
-.gallery-card img{
-height:190px;
-}
+    .order-box{
+        padding:25px 16px;
+    }
 
-.gallery-caption{
-font-size:12px;
-padding:9px 4px;
-}
+    .gallery{
+        grid-template-columns:repeat(2,1fr);
+        gap:12px;
+    }
 
-.service-box{
-padding:28px 17px;
-}
+    .gallery-card img{
+        height:190px;
+    }
 
-.modal-content img{
-max-width:94vw;
-max-height:76vh;
-}
+    .gallery-caption{
+        font-size:12px;
+        padding:9px 4px;
+    }
 
-.modal-nav{
-padding:0 5px;
-}
+    .modal-content img{
+        max-width:94vw;
+        max-height:76vh;
+    }
 
-.modal-nav button{
-width:42px;
-height:42px;
-font-size:26px;
-}
+    .modal-nav{
+        padding:0 5px;
+    }
 
-.close-modal{
-width:42px;
-height:42px;
-font-size:27px;
-}
+    .modal-nav button{
+        width:42px;
+        height:42px;
+        font-size:26px;
+    }
 
-.contact h2{
-font-size:28px;
-}
+    .close-modal{
+        width:42px;
+        height:42px;
+        font-size:27px;
+    }
+
+    .contact h2{
+        font-size:28px;
+    }
 
 }
 
 </style>
+
 </head>
+
 
 <body>
 
-<!-- HEADER -->
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
 
 <header>
 
@@ -581,19 +734,26 @@ Photography • Photo Restoration • CSC • Digital Services
 </header>
 
 
-<!-- NAVIGATION -->
+<!-- =====================================================
+     NAVIGATION
+===================================================== -->
 
 <nav>
 
 <a href="#services">Services</a>
+
 <a href="#gallery">Gallery</a>
+
 <a href="#order">Order</a>
+
 <a href="#contact">Contact</a>
 
 </nav>
 
 
-<!-- HERO -->
+<!-- =====================================================
+     HERO
+===================================================== -->
 
 <section class="hero">
 
@@ -606,7 +766,8 @@ Photography, Photo Restoration, Document Services,
 Graphic Designing, Printing, CSC, Online Forms और Railway Ticket Booking.
 </p>
 
-<a class="btn"
+<a
+class="btn"
 href="https://wa.me/919451118011?text=नमस्ते%20Gayatri%20Studio,%20मुझे%20काम%20करवाना%20है।">
 
 📱 अपना काम भेजें
@@ -616,7 +777,9 @@ href="https://wa.me/919451118011?text=नमस्ते%20Gayatri%20Studio,%20�
 </section>
 
 
-<!-- SERVICES -->
+<!-- =====================================================
+     SERVICES
+===================================================== -->
 
 <section id="services">
 
@@ -625,22 +788,25 @@ href="https://wa.me/919451118011?text=नमस्ते%20Gayatri%20Studio,%20�
 </h2>
 
 <p class="section-subtitle">
-किसी भी service पर क्लिक करके उसके अंदर उपलब्ध काम देखें।
-फिर सीधे WhatsApp पर अपना काम भेज सकते हैं।
+किसी भी service पर क्लिक करके पूरी जानकारी देखें और सीधे
+WhatsApp पर काम भेजें।
 </p>
 
 
 <div class="services">
 
 
-<!-- 1 PASSPORT -->
-
-<div class="service-card"
+<div
+class="service-card"
 onclick="openService(0)">
 
-<div class="service-icon">📸</div>
+<div class="service-icon">
+📸
+</div>
 
-<h3>Passport Photo</h3>
+<h3>
+Passport Photo
+</h3>
 
 <p>
 Passport, Visa, ID और Application Photos
@@ -653,14 +819,17 @@ Passport, Visa, ID और Application Photos
 </div>
 
 
-<!-- 2 RESTORATION -->
-
-<div class="service-card"
+<div
+class="service-card"
 onclick="openService(1)">
 
-<div class="service-icon">🧓</div>
+<div class="service-icon">
+🧓
+</div>
 
-<h3>Photo Restoration</h3>
+<h3>
+Photo Restoration
+</h3>
 
 <p>
 पुरानी और खराब फोटो की Restoration
@@ -673,14 +842,17 @@ onclick="openService(1)">
 </div>
 
 
-<!-- 3 DOCUMENT -->
-
-<div class="service-card"
+<div
+class="service-card"
 onclick="openService(2)">
 
-<div class="service-icon">📄</div>
+<div class="service-icon">
+📄
+</div>
 
-<h3>Document Restoration</h3>
+<h3>
+Document Restoration
+</h3>
 
 <p>
 पुराने Documents की Digital Cleaning
@@ -693,14 +865,17 @@ onclick="openService(2)">
 </div>
 
 
-<!-- 4 ENHANCEMENT -->
-
-<div class="service-card"
+<div
+class="service-card"
 onclick="openService(3)">
 
-<div class="service-icon">✨</div>
+<div class="service-icon">
+✨
+</div>
 
-<h3>Photo Enhancement</h3>
+<h3>
+Photo Enhancement
+</h3>
 
 <p>
 Light, Color, Clarity और Quality Improvement
@@ -713,14 +888,17 @@ Light, Color, Clarity और Quality Improvement
 </div>
 
 
-<!-- 5 DESIGN -->
-
-<div class="service-card"
+<div
+class="service-card"
 onclick="openService(4)">
 
-<div class="service-icon">🎨</div>
+<div class="service-icon">
+🎨
+</div>
 
-<h3>Graphic Designing</h3>
+<h3>
+Graphic Designing
+</h3>
 
 <p>
 Resume, Card, Poster, Banner और Design Work
@@ -733,14 +911,17 @@ Resume, Card, Poster, Banner और Design Work
 </div>
 
 
-<!-- 6 PRINTING -->
-
-<div class="service-card"
+<div
+class="service-card"
 onclick="openService(5)">
 
-<div class="service-icon">🖨️</div>
+<div class="service-icon">
+🖨️
+</div>
 
-<h3>Photo Printing</h3>
+<h3>
+Photo Printing
+</h3>
 
 <p>
 Photo और Document Printing
@@ -753,14 +934,17 @@ Photo और Document Printing
 </div>
 
 
-<!-- 7 CSC -->
-
-<div class="service-card"
+<div
+class="service-card"
 onclick="openService(6)">
 
-<div class="service-icon">🏛️</div>
+<div class="service-icon">
+🏛️
+</div>
 
-<h3>CSC / जनसेवा केंद्र</h3>
+<h3>
+CSC / जनसेवा केंद्र
+</h3>
 
 <p>
 Online Forms और Citizen Services
@@ -773,14 +957,17 @@ Online Forms और Citizen Services
 </div>
 
 
-<!-- 8 RAILWAY -->
-
-<div class="service-card"
+<div
+class="service-card"
 onclick="openService(7)">
 
-<div class="service-icon">🚆</div>
+<div class="service-icon">
+🚆
+</div>
 
-<h3>Railway Ticket Booking</h3>
+<h3>
+Railway Ticket Booking
+</h3>
 
 <p>
 Normal और Tatkal Ticket Assistance
@@ -798,7 +985,9 @@ Normal और Tatkal Ticket Assistance
 </section>
 
 
-<!-- SERVICE DETAIL MODAL -->
+<!-- =====================================================
+     SERVICE DETAIL MODAL
+===================================================== -->
 
 <div
 class="service-modal"
@@ -816,18 +1005,24 @@ onclick="closeService()">
 <div
 class="service-icon-large"
 id="serviceIcon">
+
 📸
+
 </div>
 
 <h2
 id="serviceTitle">
+
 Service
+
 </h2>
 
 <p
 class="description"
 id="serviceDescription">
+
 Service Details
+
 </p>
 
 <ul
@@ -853,7 +1048,204 @@ href="#">
 </div>
 
 
-<!-- GALLERY -->
+<!-- =====================================================
+     ONLINE ORDER SECTION
+===================================================== -->
+
+<section
+id="order"
+class="order-section">
+
+<h2 class="section-title">
+ऑनलाइन काम भेजें
+</h2>
+
+<p class="section-subtitle">
+नीचे अपनी जानकारी भरकर काम की request तैयार करें।
+फिर WhatsApp पर भेजें।
+</p>
+
+
+<div class="order-box">
+
+<p class="order-intro">
+अपनी service चुनें और काम की जानकारी भरें।
+</p>
+
+
+<form id="orderForm">
+
+
+<!-- NAME -->
+
+<div class="form-group">
+
+<label for="customerName">
+👤 आपका नाम
+</label>
+
+<input
+type="text"
+id="customerName"
+placeholder="अपना नाम लिखें"
+required>
+
+</div>
+
+
+<!-- MOBILE -->
+
+<div class="form-group">
+
+<label for="customerMobile">
+📱 मोबाइल नंबर
+</label>
+
+<input
+type="tel"
+id="customerMobile"
+placeholder="अपना मोबाइल नंबर लिखें"
+inputmode="numeric"
+required>
+
+</div>
+
+
+<!-- SERVICE -->
+
+<div class="form-group">
+
+<label for="orderService">
+🛠️ कौन-सा काम करवाना है?
+</label>
+
+<select
+id="orderService"
+required>
+
+<option value="">
+-- Service चुनें --
+
+</option>
+
+<option value="Passport Photo">
+📸 Passport Photo
+</option>
+
+<option value="Photo Restoration">
+🧓 Photo Restoration
+</option>
+
+<option value="Document Restoration">
+📄 Document Restoration
+</option>
+
+<option value="Photo Enhancement">
+✨ Photo Enhancement
+</option>
+
+<option value="Graphic Designing">
+🎨 Graphic Designing
+</option>
+
+<option value="Photo Printing">
+🖨️ Photo Printing
+</option>
+
+<option value="CSC / जनसेवा केंद्र">
+🏛️ CSC / जनसेवा केंद्र
+</option>
+
+<option value="Railway Ticket Booking">
+🚆 Railway Ticket Booking
+</option>
+
+</select>
+
+</div>
+
+
+<!-- DETAILS -->
+
+<div class="form-group">
+
+<label for="orderDetails">
+📝 काम की जानकारी
+</label>
+
+<textarea
+id="orderDetails"
+placeholder="उदाहरण: 4 passport photos चाहिए, पुरानी फोटो restore करनी है, A4 print चाहिए आदि."
+required></textarea>
+
+</div>
+
+
+<!-- FILE -->
+
+<div class="form-group">
+
+<label>
+📎 फोटो / File चुनें
+</label>
+
+<div class="file-box">
+
+<input
+type="file"
+id="orderFile"
+accept="image/*,.pdf,.doc,.docx">
+
+<div
+class="file-info"
+id="fileInfo">
+
+अभी कोई file select नहीं की गई।
+
+</div>
+
+<div class="file-warning">
+
+नोट: अभी file वेबसाइट पर automatic upload नहीं होगी।
+WhatsApp खुलने के बाद आपको file वहाँ attach करनी होगी।
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- SUBMIT -->
+
+<button
+type="submit"
+class="btn order-submit">
+
+📱 WhatsApp पर Order भेजें
+
+</button>
+
+
+</form>
+
+
+<div class="order-note">
+
+<strong>महत्वपूर्ण:</strong>
+यह form अभी आपके WhatsApp पर order details तैयार करता है।
+Automatic photo upload और online payment वाला system हम अगले चरण में जोड़ सकते हैं।
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     GALLERY
+===================================================== -->
 
 <section id="gallery">
 
@@ -865,12 +1257,15 @@ href="#">
 हमारे किए हुए काम के samples देखने के लिए किसी photo पर क्लिक करें।
 </p>
 
+
 <div
 class="gallery"
 id="githubGallery">
 
 <div class="gallery-loading">
+
 📸 हमारी photos load हो रही हैं...
+
 </div>
 
 </div>
@@ -878,7 +1273,9 @@ id="githubGallery">
 </section>
 
 
-<!-- PHOTO PREVIEW -->
+<!-- =====================================================
+     PHOTO PREVIEW
+===================================================== -->
 
 <div
 class="photo-modal"
@@ -889,7 +1286,9 @@ class="close-modal"
 id="closeModal">
 
 ×
+
 </button>
+
 
 <div class="modal-nav">
 
@@ -897,15 +1296,18 @@ id="closeModal">
 id="prevPhoto">
 
 ‹
+
 </button>
 
 <button
 id="nextPhoto">
 
 ›
+
 </button>
 
 </div>
+
 
 <div class="modal-content">
 
@@ -917,42 +1319,17 @@ alt="Gayatri Studio Photo">
 <div
 class="modal-caption"
 id="modalCaption">
-</div>
 
 </div>
 
 </div>
 
-
-<!-- ORDER -->
-
-<section id="order">
-
-<h2 class="section-title">
-फोटो का काम भेजें
-</h2>
-
-<div class="order">
-
-<p>
-अपनी फोटो या काम की जानकारी WhatsApp पर भेजें।
-हम काम देखकर आपको कीमत और समय बता देंगे।
-</p>
-
-<a
-class="btn"
-href="https://wa.me/919451118011?text=नमस्ते%20Gayatri%20Studio,%20मैं%20अपना%20काम%20भेजना%20चाहता%20हूँ।">
-
-📱 WhatsApp पर काम भेजें
-
-</a>
-
 </div>
 
-</section>
 
-
-<!-- CONTACT -->
+<!-- =====================================================
+     CONTACT
+===================================================== -->
 
 <section
 id="contact"
@@ -962,7 +1339,9 @@ class="contact">
 GAYATRI STUDIO
 </h2>
 
+
 <div class="contact-info">
+
 
 <div class="contact-item">
 
@@ -971,6 +1350,7 @@ GAYATRI STUDIO
 TARAWA CHAUK BILAUJHA, MAU
 
 </div>
+
 
 <div class="contact-item">
 
@@ -988,6 +1368,7 @@ TARAWA CHAUK BILAUJHA, MAU
 
 </div>
 
+
 <div class="contact-item">
 
 ✉️ <strong>Email:</strong><br>
@@ -1000,6 +1381,7 @@ gayatristudiophotoworld@gmail.com
 
 </div>
 
+
 <div class="contact-item">
 
 🕚 <strong>Opening Hours:</strong><br>
@@ -1008,10 +1390,12 @@ gayatristudiophotoworld@gmail.com
 
 </div>
 
+
 </div>
 
 
 <div class="contact-buttons">
+
 
 <a
 class="btn call-btn"
@@ -1021,6 +1405,7 @@ href="tel:8601535214">
 
 </a>
 
+
 <a
 class="btn"
 href="https://wa.me/919451118011?text=नमस्ते%20Gayatri%20Studio,%20मुझे%20काम%20करवाना%20है।">
@@ -1028,6 +1413,7 @@ href="https://wa.me/919451118011?text=नमस्ते%20Gayatri%20Studio,%20�
 📱 WhatsApp
 
 </a>
+
 
 <a
 class="btn email-btn"
@@ -1037,12 +1423,15 @@ href="mailto:gayatristudiophotoworld@gmail.com">
 
 </a>
 
+
 </div>
 
 </section>
 
 
-<!-- FOOTER -->
+<!-- =====================================================
+     FOOTER
+===================================================== -->
 
 <footer>
 
@@ -1064,7 +1453,7 @@ Professional Photography • Photo Restoration • CSC • Digital Services
 <script>
 
 /* =====================================================
-   SERVICE INFORMATION
+   SERVICE DATA
 ===================================================== */
 
 const services = [
@@ -1217,63 +1606,181 @@ items:[
 
 function openService(index){
 
-const service=services[index];
+    const service=services[index];
 
-document.getElementById("serviceIcon").textContent=service.icon;
+    document.getElementById("serviceIcon").textContent=service.icon;
 
-document.getElementById("serviceTitle").textContent=service.title;
+    document.getElementById("serviceTitle").textContent=service.title;
 
-document.getElementById("serviceDescription").textContent=service.description;
+    document.getElementById("serviceDescription").textContent=service.description;
 
-const list=document.getElementById("serviceList");
+    const list=document.getElementById("serviceList");
 
-list.innerHTML="";
+    list.innerHTML="";
 
-service.items.forEach(function(item){
+    service.items.forEach(function(item){
 
-const li=document.createElement("li");
+        const li=document.createElement("li");
 
-li.innerHTML="✓ <strong>"+item+"</strong>";
+        li.textContent="✓ "+item;
 
-list.appendChild(li);
+        list.appendChild(li);
 
-});
+    });
 
-const message=
-"नमस्ते Gayatri Studio, मुझे "+service.title+
-" की service चाहिए। कृपया जानकारी और कीमत बताएं।";
+    const message=
+    "नमस्ते Gayatri Studio, मुझे "+
+    service.title+
+    " की service चाहिए। कृपया जानकारी और कीमत बताएं।";
 
-document.getElementById("serviceWhatsApp").href=
-"https://wa.me/919451118011?text="+
-encodeURIComponent(message);
+    document.getElementById("serviceWhatsApp").href=
+    "https://wa.me/919451118011?text="+
+    encodeURIComponent(message);
 
-document.getElementById("serviceModal").classList.add("show");
+    document.getElementById("serviceModal").classList.add("show");
 
-document.body.style.overflow="hidden";
-
+    document.body.style.overflow="hidden";
 }
 
 
 function closeService(){
 
-document.getElementById("serviceModal").classList.remove("show");
+    document.getElementById("serviceModal").classList.remove("show");
 
-document.body.style.overflow="";
-
+    document.body.style.overflow="";
 }
 
 
 document.getElementById("serviceModal").addEventListener(
-"click",
-function(event){
+    "click",
+    function(event){
 
-if(event.target===document.getElementById("serviceModal")){
+        if(event.target===document.getElementById("serviceModal")){
 
-closeService();
+            closeService();
 
-}
+        }
 
-}
+    }
+);
+
+
+/* =====================================================
+   FILE SELECT
+===================================================== */
+
+const orderFile=document.getElementById("orderFile");
+
+const fileInfo=document.getElementById("fileInfo");
+
+
+orderFile.addEventListener(
+    "change",
+    function(){
+
+        if(!orderFile.files.length){
+
+            fileInfo.textContent=
+            "अभी कोई file select नहीं की गई।";
+
+            return;
+
+        }
+
+        const file=orderFile.files[0];
+
+        const sizeKB=
+        Math.round(file.size/1024);
+
+        fileInfo.textContent=
+        "Selected: "+
+        file.name+
+        " ("+
+        sizeKB+
+        " KB)";
+
+    }
+);
+
+
+/* =====================================================
+   ORDER FORM
+===================================================== */
+
+document.getElementById("orderForm").addEventListener(
+    "submit",
+    function(event){
+
+        event.preventDefault();
+
+
+        const name=
+        document.getElementById("customerName").value.trim();
+
+
+        const mobile=
+        document.getElementById("customerMobile").value.trim();
+
+
+        const service=
+        document.getElementById("orderService").value;
+
+
+        const details=
+        document.getElementById("orderDetails").value.trim();
+
+
+        const file=
+        orderFile.files.length
+        ? orderFile.files[0].name
+        : "कोई file select नहीं की गई";
+
+
+        if(!name || !mobile || !service || !details){
+
+            alert(
+                "कृपया Name, Mobile, Service और काम की जानकारी भरें।"
+            );
+
+            return;
+
+        }
+
+
+        const message=
+
+`नमस्ते Gayatri Studio,
+
+मुझे online काम करवाना है।
+
+👤 नाम: ${name}
+
+📱 मोबाइल: ${mobile}
+
+🛠️ Service: ${service}
+
+📝 काम की जानकारी:
+${details}
+
+📎 Selected File:
+${file}
+
+कृपया काम देखकर कीमत और समय बता दें।
+
+धन्यवाद।`;
+
+
+        const whatsappURL=
+        "https://wa.me/919451118011?text="+
+        encodeURIComponent(message);
+
+
+        window.open(
+            whatsappURL,
+            "_blank"
+        );
+
+    }
 );
 
 
@@ -1290,288 +1797,399 @@ const GITHUB_BRANCH="main";
 const GITHUB_API=
 `https://api.github.com/repos/${GITHUB_USERNAME}/${GITHUB_REPOSITORY}/contents?ref=${GITHUB_BRANCH}`;
 
-const gallery=document.getElementById("githubGallery");
 
-const photoModal=document.getElementById("photoModal");
+const gallery=
+document.getElementById("githubGallery");
 
-const modalImage=document.getElementById("modalImage");
 
-const modalCaption=document.getElementById("modalCaption");
+const photoModal=
+document.getElementById("photoModal");
 
-const closeModal=document.getElementById("closeModal");
 
-const prevPhoto=document.getElementById("prevPhoto");
+const modalImage=
+document.getElementById("modalImage");
 
-const nextPhoto=document.getElementById("nextPhoto");
+
+const modalCaption=
+document.getElementById("modalCaption");
+
+
+const closeModal=
+document.getElementById("closeModal");
+
+
+const prevPhoto=
+document.getElementById("prevPhoto");
+
+
+const nextPhoto=
+document.getElementById("nextPhoto");
+
 
 let photos=[];
 
 let currentPhotoIndex=0;
 
 
+/* =====================================================
+   IMAGE CHECK
+===================================================== */
+
 function isImageFile(name){
 
-const lower=name.toLowerCase();
+    const lower=name.toLowerCase();
 
-return(
-lower.endsWith(".jpg") ||
-lower.endsWith(".jpeg") ||
-lower.endsWith(".png") ||
-lower.endsWith(".webp") ||
-lower.endsWith(".gif")
-);
+    return(
+        lower.endsWith(".jpg") ||
+        lower.endsWith(".jpeg") ||
+        lower.endsWith(".png") ||
+        lower.endsWith(".webp") ||
+        lower.endsWith(".gif")
+    );
 
 }
 
+
+/* =====================================================
+   PHOTO NAME
+===================================================== */
 
 function cleanPhotoName(name){
 
-return name
-.replace(/\.[^/.]+$/,"")
-.replace(/[_-]+/g," ")
-.replace(/\b\w/g,function(letter){
+    return name
+    .replace(/\.[^/.]+$/,"")
+    .replace(/[_-]+/g," ")
+    .replace(/\b\w/g,function(letter){
 
-return letter.toUpperCase();
+        return letter.toUpperCase();
 
-});
+    });
 
 }
 
+
+/* =====================================================
+   LOAD GALLERY
+===================================================== */
 
 async function loadGallery(){
 
-try{
+    try{
 
-gallery.innerHTML=
-`<div class="gallery-loading">
-📸 Photos load हो रही हैं...
-</div>`;
+        gallery.innerHTML=
+        `<div class="gallery-loading">
+        📸 Photos load हो रही हैं...
+        </div>`;
 
-const response=await fetch(GITHUB_API);
 
-if(!response.ok){
+        const response=
+        await fetch(GITHUB_API);
 
-throw new Error("GitHub files load नहीं हो सकीं.");
+
+        if(!response.ok){
+
+            throw new Error(
+                "GitHub files load नहीं हो सकीं."
+            );
+
+        }
+
+
+        const files=
+        await response.json();
+
+
+        photos=
+        files
+        .filter(file=>
+            file.type==="file" &&
+            isImageFile(file.name)
+        )
+        .map(file=>({
+
+            name:file.name,
+
+            url:file.download_url
+
+        }));
+
+
+        if(photos.length===0){
+
+            gallery.innerHTML=
+            `<div class="gallery-error">
+
+            📷 अभी Gallery में कोई photo नहीं मिली।
+
+            </div>`;
+
+            return;
+
+        }
+
+
+        gallery.innerHTML="";
+
+
+        photos.forEach(function(photo,index){
+
+            const card=
+            document.createElement("div");
+
+            card.className=
+            "gallery-card";
+
+
+            const img=
+            document.createElement("img");
+
+            img.src=
+            photo.url;
+
+            img.alt=
+            cleanPhotoName(photo.name);
+
+            img.loading=
+            "lazy";
+
+
+            const caption=
+            document.createElement("div");
+
+            caption.className=
+            "gallery-caption";
+
+            caption.textContent=
+            cleanPhotoName(photo.name);
+
+
+            card.appendChild(img);
+
+            card.appendChild(caption);
+
+
+            card.addEventListener(
+                "click",
+                function(){
+
+                    openPhoto(index);
+
+                }
+            );
+
+
+            gallery.appendChild(card);
+
+        });
+
+    }
+
+    catch(error){
+
+        console.error(error);
+
+
+        gallery.innerHTML=
+        `<div class="gallery-error">
+
+        ❌ Gallery load नहीं हो सकी।
+
+        <br><br>
+
+        कृपया थोड़ी देर बाद फिर से देखें।
+
+        </div>`;
+
+    }
 
 }
 
-const files=await response.json();
 
-photos=files
-.filter(file=>
-file.type==="file" &&
-isImageFile(file.name)
-)
-.map(file=>({
-
-name:file.name,
-
-url:file.download_url
-
-}));
-
-
-if(photos.length===0){
-
-gallery.innerHTML=
-`<div class="gallery-error">
-📷 अभी Gallery में कोई photo नहीं मिली।
-</div>`;
-
-return;
-
-}
-
-
-gallery.innerHTML="";
-
-
-photos.forEach(function(photo,index){
-
-const card=document.createElement("div");
-
-card.className="gallery-card";
-
-
-const img=document.createElement("img");
-
-img.src=photo.url;
-
-img.alt=cleanPhotoName(photo.name);
-
-img.loading="lazy";
-
-
-const caption=document.createElement("div");
-
-caption.className="gallery-caption";
-
-caption.textContent=cleanPhotoName(photo.name);
-
-
-card.appendChild(img);
-
-card.appendChild(caption);
-
-
-card.addEventListener("click",function(){
-
-openPhoto(index);
-
-});
-
-
-gallery.appendChild(card);
-
-});
-
-}
-
-catch(error){
-
-console.error(error);
-
-gallery.innerHTML=
-`<div class="gallery-error">
-❌ Gallery load नहीं हो सकी।
-<br><br>
-कृपया थोड़ी देर बाद फिर से देखें।
-</div>`;
-
-}
-
-}
-
+/* =====================================================
+   OPEN PHOTO
+===================================================== */
 
 function openPhoto(index){
 
-if(!photos.length){
+    if(!photos.length){
 
-return;
+        return;
+
+    }
+
+
+    currentPhotoIndex=index;
+
+
+    const photo=
+    photos[currentPhotoIndex];
+
+
+    modalImage.src=
+    photo.url;
+
+
+    modalImage.alt=
+    cleanPhotoName(photo.name);
+
+
+    modalCaption.textContent=
+    cleanPhotoName(photo.name);
+
+
+    photoModal.classList.add("show");
+
+
+    document.body.style.overflow=
+    "hidden";
 
 }
 
-currentPhotoIndex=index;
 
-const photo=photos[currentPhotoIndex];
-
-modalImage.src=photo.url;
-
-modalImage.alt=cleanPhotoName(photo.name);
-
-modalCaption.textContent=cleanPhotoName(photo.name);
-
-photoModal.classList.add("show");
-
-document.body.style.overflow="hidden";
-
-}
-
+/* =====================================================
+   CLOSE PHOTO
+===================================================== */
 
 function closePhoto(){
 
-photoModal.classList.remove("show");
+    photoModal.classList.remove("show");
 
-modalImage.src="";
+    modalImage.src="";
 
-document.body.style.overflow="";
+    document.body.style.overflow="";
 
 }
 
+
+/* =====================================================
+   NEXT PHOTO
+===================================================== */
 
 function showNextPhoto(){
 
-if(!photos.length){
+    if(!photos.length){
 
-return;
+        return;
+
+    }
+
+
+    currentPhotoIndex=
+    (currentPhotoIndex+1)
+    %photos.length;
+
+
+    openPhoto(currentPhotoIndex);
 
 }
 
-currentPhotoIndex=
-(currentPhotoIndex+1)%photos.length;
 
-openPhoto(currentPhotoIndex);
-
-}
-
+/* =====================================================
+   PREVIOUS PHOTO
+===================================================== */
 
 function showPreviousPhoto(){
 
-if(!photos.length){
+    if(!photos.length){
 
-return;
+        return;
+
+    }
+
+
+    currentPhotoIndex=
+    (currentPhotoIndex-1+photos.length)
+    %photos.length;
+
+
+    openPhoto(currentPhotoIndex);
 
 }
 
-currentPhotoIndex=
-(currentPhotoIndex-1+photos.length)%photos.length;
 
-openPhoto(currentPhotoIndex);
-
-}
-
+/* =====================================================
+   PHOTO BUTTONS
+===================================================== */
 
 closeModal.addEventListener(
-"click",
-closePhoto
+    "click",
+    closePhoto
 );
+
 
 nextPhoto.addEventListener(
-"click",
-showNextPhoto
+    "click",
+    showNextPhoto
 );
+
 
 prevPhoto.addEventListener(
-"click",
-showPreviousPhoto
+    "click",
+    showPreviousPhoto
 );
 
+
+/* =====================================================
+   OUTSIDE PHOTO CLICK
+===================================================== */
 
 photoModal.addEventListener(
-"click",
-function(event){
+    "click",
+    function(event){
 
-if(event.target===photoModal){
+        if(event.target===photoModal){
 
-closePhoto();
+            closePhoto();
 
-}
+        }
 
-}
+    }
 );
 
+
+/* =====================================================
+   KEYBOARD
+===================================================== */
 
 document.addEventListener(
-"keydown",
-function(event){
+    "keydown",
+    function(event){
 
-if(event.key==="Escape"){
+        if(event.key==="Escape"){
 
-closePhoto();
+            closePhoto();
 
-}
+            closeService();
 
-if(
-photoModal.classList.contains("show") &&
-event.key==="ArrowRight"
-){
+        }
 
-showNextPhoto();
 
-}
+        if(
+            photoModal.classList.contains("show") &&
+            event.key==="ArrowRight"
+        ){
 
-if(
-photoModal.classList.contains("show") &&
-event.key==="ArrowLeft"
-){
+            showNextPhoto();
 
-showPreviousPhoto();
+        }
 
-}
 
-}
+        if(
+            photoModal.classList.contains("show") &&
+            event.key==="ArrowLeft"
+        ){
+
+            showPreviousPhoto();
+
+        }
+
+    }
 );
 
+
+/* =====================================================
+   START
+===================================================== */
 
 loadGallery();
 
